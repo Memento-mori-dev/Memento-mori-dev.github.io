@@ -1,0 +1,7455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aggreko</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&amp;family=Oswald:wght@200;300;500;700&amp;display=swap");
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+p,li,a,h2,h3,h4{max-width:992px;}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.introSwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.introSwiper .swiper-wrapper {
+  position: relative;
+}
+.introSwiper .swiper-button-next {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #000;
+  background-image: url("../images/slider-arrow-next.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: unset;
+  filter: invert(3%) sepia(3%) saturate(7232%) hue-rotate(168deg) brightness(92%) contrast(92%);
+  transition: all 0.16s ease;
+}
+.introSwiper .swiper-button-next:before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #FD6E39;
+  transition: all 0.16s ease;
+}
+.introSwiper .swiper-button-next:hover {
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+  background-image: url("../images/slider-arrow-next.svg");
+  background-repeat: no-repeat;
+  background-position: 25px center;
+}
+.introSwiper .swiper-button-next:hover::before {
+  width: 0.875rem;
+}
+.introSwiper .swiper-button-prev {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #000;
+  background-image: url("../images/slider-arrow-prev.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  left: unset;
+  right: 80px;
+  top: unset;
+  bottom: 0;
+  filter: invert(3%) sepia(3%) saturate(7232%) hue-rotate(168deg) brightness(92%) contrast(92%);
+  transition: all 0.16s ease;
+}
+.introSwiper .swiper-button-prev:before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #FD6E39;
+  transition: all 0.16s ease;
+}
+.introSwiper .swiper-button-prev:hover {
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+  background-image: url("../images/slider-arrow-prev.svg");
+  background-repeat: no-repeat;
+  background-position: 13px center;
+}
+.introSwiper .swiper-button-prev:hover::before {
+  width: 0.875rem;
+}
+.introSwiper .swiper-button-next::after,
+.introSwiper .swiper-button-prev::after {
+  display: none;
+}
+/*====== equipmentsSwiper=========*/
+.equipments-section .wrapper{
+  margin-bottom: 3rem;
+}
+.equipments-section .section-opening-wrapper{
+  display: block;
+}
+.equipmentsSwiper {
+  position: relative;
+  width: 83rem;
+  margin-top: 1rem;
+}
+.equipmentsSwiper .equipmentsSwiper-button-next .arrow-btn-wrapper {
+  cursor: pointer;
+}
+.equipmentsSwiper .equipmentsSwiper-img {
+  width: 416px;
+  height: 234px;
+  /*object-fit: contain;*/
+  object-fit: fill;
+}
+.equipmentsSwiper .animation-item__overlay-wrapper {
+  width: 416px;
+  height: 234px;
+  position: relative;
+}
+.equipmentsSwiper .swiper-slide .equipmentsSwiper__category-label {
+  position: absolute;
+  top: 12.625rem;
+  left: 0;
+  background: #0E1114;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  z-index: 4;
+}
+.equipmentsSwiper .swiper-slide .arrow-btn-wrapper::before, .equipmentsSwiper .swiper-slide .arrow-btn-wrapper::after {
+  display: none !important;
+}
+.equipmentsSwiper .equipmentsSwiper-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5625rem;
+  margin-top: 1.75rem;
+}
+
+/*====== !equipmentsSwiper=========*/
+.projectsSwiper {
+  position: relative;
+  width: 83rem;
+  margin-top: 3rem;
+}
+.projectsSwiper .projectsSwiper-button-next .arrow-btn-wrapper {
+  cursor: pointer;
+}
+.projectsSwiper .projectsSwiper-img {
+  width: 416px;
+  height: 234px;
+  /*object-fit: contain;*/
+  object-fit: fill;
+}
+.projectsSwiper .animation-item__overlay-wrapper {
+  width: 416px;
+  height: 234px;
+  position: relative;
+}
+.projectsSwiper .swiper-slide .projectsSlider__category-label {
+  position: absolute;
+  top: 12.625rem;
+  left: 0;
+  background: #0E1114;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  z-index: 4;
+}
+.projectsSwiper .swiper-slide .arrow-btn-wrapper::before, .projectsSwiper .swiper-slide .arrow-btn-wrapper::after {
+  display: none !important;
+}
+.projectsSwiper .projectsSlider-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5625rem;
+  margin-top: 1.75rem;
+}
+
+.newsSwiper {
+  position: relative;
+  width: 83rem;
+  margin-top: 3rem;
+}
+.newsSwiper .newsSwiper-button-next .arrow-btn-wrapper {
+  cursor: pointer;
+}
+.newsSwiper .newsSwiper-img {
+  width: 416px;
+  height: 234px;
+  object-fit: contain;
+}
+.newsSwiper .animation-item__overlay-wrapper {
+  width: 416px;
+  height: 234px;
+  position: relative;
+}
+.newsSwiper .swiper-slide .newsSlider__category-label {
+  position: absolute;
+  top: 12.625rem;
+  left: 0;
+  background: #0E1114;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  z-index: 4;
+}
+.newsSwiper .swiper-slide .arrow-btn-wrapper::before, .newsSwiper .swiper-slide .arrow-btn-wrapper::after {
+  display: none !important;
+}
+.newsSwiper .newsSlider-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5625rem;
+  margin-top: 1.75rem;
+}
+
+.reviewsSwiper {
+  position: relative;
+  width: 83rem;
+  margin-top: 3rem;
+}
+.reviewsSwiper .swiper-slide {
+  position: relative;
+  padding: 2.25rem 1.5rem 1.75rem 0;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+  min-height: 280px;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: Oswald;
+  font-size: 0.5625rem;
+  font-weight: 500;
+  line-height: 0.75rem;
+  letter-spacing: 0.0675rem;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  background: #E6EAF6;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__intro-container {
+  display: flex;
+  justify-content: space-between;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__partner-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__short-description {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__title-container {
+  margin-left: 1rem;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__text {
+  text-overflow: ellipsis;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-top: 0.75rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.16s ease;
+  max-height: 80px;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__text.textRows4 {
+  -webkit-line-clamp: 4;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__text.textRows13 {
+  -webkit-line-clamp: 13;
+}
+.reviewsSwiper .swiper-slide .reviewsSwiper__text.active {
+  max-height: 260px;
+}
+.reviewsSwiper .reviewsSwiper-button-next .arrow-btn-wrapper {
+  cursor: pointer;
+}
+.reviewsSwiper .reviesSwiper__btns-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.reviewsSwiper .reviewsSwiper__expand-btn {
+  border: none;
+  background: transparent;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px dashed #0E1114;
+  padding-bottom: 0.25rem;
+  transition: all 0.16s ease;
+}
+.reviewsSwiper .reviewsSwiper__expand-btn:hover {
+  color: #FD6E39;
+}
+.reviewsSwiper .reviewsSwiper__popup-btn {
+  border: none;
+  background: transparent;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.reviewsSwiper .reviewsSwiper__popup-btn:hover {
+  color: #FD6E39;
+}
+.reviewsSwiper .arrow-btn-wrapper::before, .reviewsSwiper .arrow-btn-wrapper::after {
+  display: none !important;
+}
+
+.partnersSwiper {
+  position: relative;
+  width: 83rem;
+  margin-top: 3rem;
+}
+
+.similarProductsSwiper {
+  position: relative;
+/*  width: 83rem;*/
+ /* width: 100%;*/
+  margin-top: 3rem;
+}
+
+.header {
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  color: #2D3540;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  background: #F7F8FC;
+}
+.header .checkbox {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: flex-start;
+}
+.header-nav ul .header-nav__li {
+  position: relative;
+  cursor: pointer;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+.header-nav ul .header-nav__li:hover {
+  padding: 0.75rem 0.6875rem 0.75rem 0;
+}
+.header-nav ul .header-nav__li:hover:first-child {
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+.header-nav ul .header-nav__li:hover:first-child .header-hover-submenu {
+  opacity: 1;
+  display: block;
+  width: 250px;
+}
+.header-nav ul .header-nav__li:hover:nth-child(2) {
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+.header-nav ul .header-nav__li:hover:nth-child(2) .header-hover-submenu {
+  opacity: 1;
+  display: block;
+  width: 375px;
+}
+.header-nav ul .header-nav__li + .header-nav__li {
+  margin-left: 1rem;
+}
+
+.header-hover-submenu {
+  z-index: 3;
+  position: absolute;
+  top: 40px;
+  left: -24px;
+  background: #fff;
+  padding: 12px 18px 12px;
+  border-top: 1px solid #FD6E39;
+  opacity: 0;
+  transition: all 0.16s ease;
+  box-shadow: 0 5px 10px #2D3540;
+  display: none;
+}
+.header-hover-submenu ul {
+  display: flex;
+  flex-direction: column;
+}
+.header-hover-submenu ul li {
+  padding: 12px 12px 12px 0;
+  /*white-space: nowrap;*/
+  white-space: normal;
+  /*width: min-content;*/
+}
+@media (max-width: 1400px) {
+.header-hover-submenu ul li {
+  width:100%;
+}
+}
+
+.header-hover-submenu ul li:hover {
+  padding: 12px 11px 12px 0;
+}
+
+.header__search-btn {
+  cursor: pointer;
+  border: none;
+  color: black;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  width: 5rem;
+  height: 2.5rem;
+  background: url("../images/search-icon.svg") no-repeat 0 center;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+  transition: 0.16s all ease;
+}
+
+.search-wrapper {
+  display: contents;
+}
+
+.search-wrapper.active {
+  position: relative;
+}
+.search-wrapper.active .search-overlay {
+  z-index: 99;
+  opacity: 0.5;
+  height: 100vh;
+}
+.search-wrapper.active .search-inner {
+  top: 0;
+}
+
+.search-inner {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 120;
+  transition: all 0.16s ease;
+}
+
+.search-overlay {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  background: #000;
+  opacity: 0;
+  transition: all 0.16s ease;
+}
+
+.search-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 112px;
+  padding: 32px 80px;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+}
+
+.search-input {
+  height: 48px;
+  width: calc(100% - 132px);
+  border: 1px solid #C3CCE0;
+ /* border-right: none;*/
+  padding-left: 46px;
+  background: url("../images/search-icon-mid-grey.svg") no-repeat 12px center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #2D3540;
+}
+.search-input::-webkit-search-cancel-button {
+  position: relative;
+  right: 20px;
+  transform: scale(1.5);
+}
+
+.search-btn,
+.search-close-btn {
+  border: 1px solid #C3CCE0;
+  width: 104px;
+  height: 48px;
+  background: #fff;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.search-btn:hover,
+.search-close-btn:hover {
+  border: 1px solid #FD6E39;
+  color: #FD6E39;
+}
+
+.search-close-btn {
+  margin-left: 32px;
+}
+
+.search-results {
+  position: absolute;
+  top: 112px;
+  left: 0;
+  padding: 0 80px 32px 80px;
+  background: #fff;
+  z-index: 100;
+  width: 100vw;
+}
+
+.search-results__title {
+  color: #C3CCE0;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.search-results__title-equipment {
+  margin-top: 32px;
+}
+
+.search-results__result-wrapper {
+  margin-top: 16px;
+  width: 100%;
+  position: relative;
+  height: 48px;
+}
+
+.search-results__result-wrapper.equipment-result .search-results__service-result {
+  margin-left: 64px;
+  width: calc(100% - 64px);
+}
+.search-results__result-wrapper.equipment-result .search-results__service-result:hover {
+ /* width: calc(100% - 64px - 60px);*/
+}
+
+.search-results__service-result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  transition: all 0.16s ease;
+  background: #fff;
+  z-index: 101;
+  cursor: pointer;
+}
+.search-results__service-result:hover {
+ /* width: calc(100% - 60px);*/
+  color: #FD6E39;
+}
+
+.search-result-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-right: 1px solid #FD6E39;
+  border-bottom: 1px solid #FD6E39;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.search-result-arrow img {
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+}
+
+.all-results-btn {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  border: 1px solid #0E1114;
+  background: none;
+  padding: 12px 58px 12px 16px;
+  margin-top: 32px;
+  cursor: pointer;
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  transition: all 0.16s ease;
+}
+.all-results-btn:hover {
+  background-position: 95% center;
+  animation-name: arrow-animation;
+  animation-duration: 0.16s;
+}
+
+.search-error-label-wrapper {
+  margin-top: 24px;
+  background: rgba(199, 52, 52, 0.1);
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #C73434;
+  position: relative;
+}
+.search-error-label-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  border-top: 1px solid #C73434;
+  border-bottom: 1px solid #C73434;
+  border-left: 1px solid #C73434;
+}
+.search-error-label-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  border-top: 1px solid #C73434;
+  border-bottom: 1px solid #C73434;
+  border-right: 1px solid #C73434;
+}
+
+.form-section {
+  padding: 5rem;
+  background-color: #2D3540;
+  background-image: url(../images/form-bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.form-section .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.form-section .titles-container {
+  width: 26rem;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.form-section .section-title {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0.5rem 0 1.5rem;
+}
+.form-section .section-subtitle {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.form-section .contacts-wrapper {
+  margin-top: 3.43rem;
+}
+.form-section .mobile-contacts__accodrion-trigger {
+  display: none;
+}
+
+.mobile-footer__content-container {
+  display: none;
+}
+
+.contacts-title {
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.contacts-city {
+  margin-top: 1rem;
+  color: #FD6E39;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.contacts-info-text {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #fff;
+}
+.contacts-info-text a {
+  font-family: Montserrat;
+  font-size: 0.81rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #fff;
+}
+
+.form {
+  border: none;
+}
+.form fieldset {
+  border: none;
+  background: #ffffff;
+  padding: 3rem;
+}
+.form fieldset select {
+  width: 100%;
+  height: 3.5rem;
+}
+.form fieldset .inputselect{
+  border: 1px solid #E6EAF6;
+}
+
+.form fieldset .form-input-container  {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  border: 1px solid #E6EAF6;
+  padding: 10px;
+}
+.form fieldset .form-input-container label {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.33px;
+}
+.form fieldset .form-input-container input {
+  margin-top: 4px;
+  border: none;
+}
+.form fieldset .form-input-container input::placeholder {
+  font-size: 0.81rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.form fieldset .form-input-container input:focus-visible {
+  outline: none;
+}
+.form fieldset .form-input-container #commentary {
+  height: 120px;
+  border: none;
+}
+.form fieldset .form-input-container #commentary::placeholder {
+  position: absolute;
+  top: 0;
+}
+.form fieldset .form-input-container #commentary:focus-visible {
+  outline: none;
+  border: none;
+}
+.form fieldset .form__text {
+  border: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 16px;
+}
+.form fieldset .form__text span {
+  text-decoration: underline;
+}
+.form fieldset input[type='submit'] {
+  width: 100%;
+  background: #0E1114;
+  font-family: Oswald;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  margin-top: 16px;
+  /* 100% */
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  padding: 20px 0;
+  transition: all 0.16s ease;
+}
+.form fieldset input[type='submit']:hover {
+  background: #FD6E39;
+}
+
+.form-section__rightside {
+  margin-left: 3rem;
+}
+
+.footer-section {
+  padding: 4rem 5rem;
+  background: #0E1114;
+  color: #E6EAF6;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.footer-section .contact-btn {
+  font-family: Oswald;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  color: #0E1114;
+  background-color: #fff;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.footer-section .contact-btn:hover {
+  color: #FD6E39;
+}
+.footer-section .footer-logo {
+  width: 174px;
+}
+.footer-section .special-hover {
+  filter: none;
+  border-right: 1px solid transparent;
+}
+.footer-section .special-hover:hover {
+  filter: none;
+  border-right: 1px solid #E6EAF6;
+}
+.footer-section .special-hover:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background: #E6EAF6;
+  transition: 0.16s all ease;
+}
+.footer-section .special-hover:hover::before {
+  width: 100%;
+}
+.footer-section a {
+  color: #E6EAF6;
+}
+
+.footer__content-slice {
+  display: flex;
+  flex-direction: column;
+  width: 17.25rem;
+}
+.footer__content-slice:nth-child(1) {
+  justify-content: space-between;
+  width: 10.93rem;
+}
+.footer__content-slice:nth-child(3) {
+  justify-content: center;
+}
+.footer__content-slice:last-child {
+  justify-content: space-between;
+}
+
+.footer__category-title {
+  color: #FD6E39;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.footer__link {
+  color: #E6EAF6;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+
+.mobile-footer__content-wrapper {
+  display: none;
+}
+
+.label-section {
+  max-width: 1760px;
+  background: #0E1114;
+  color: #fff;
+  margin: 0 auto;
+  padding: 40px;
+  overflow: hidden;
+}
+.label-section h1 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  margin-top: 80px;
+}
+
+.label-section__text {
+  color: #C3CCE0;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.label-section h1,
+.label-section__text {
+  position: relative;
+  z-index: 2;
+}
+
+.label-section__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.equipment-page .label-section__image,
+.about-company-page .label-section__image{
+  right: -32px;
+  transform: scale(1.35);
+}
+
+.about-company-page .label-section__image_career {
+  right: 0;
+}
+
+.label-section {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* .label-section.equipment-page {
+  background-image: url("../images/equipment-page-label-img.svg");
+} */
+
+.equipment-categories__links-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.equipment-categories__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  padding: 0 16px;
+}
+.equipment-categories__link:hover {
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+}
+
+.equipment-categories__img {
+  width: 128px;
+}
+
+.equipment-categories__title {
+  color: #000;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 233px;
+  margin-top: 16px;
+}
+
+.equipment-products-section {
+  margin-top: 48px;
+}
+.equipment-products-section .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: -48px;
+}
+
+.equipment-products__tile {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: -48px;
+}
+
+.equipment-product__overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FD6E39;
+  z-index: 10;
+  position: relative;
+  opacity: 0;
+  transition: all 0.16s ease;
+}
+
+.equipment-product {
+  width: 410px;
+  height: 410px;
+  position: relative;
+  border: 1px solid #E6EAF6;
+  cursor: pointer;
+  margin-top: 48px;
+  margin-left: 48px;
+}
+.equipment-product:hover .equipment-product__overlay-wrapper {
+  opacity: 1;
+}
+.equipment-product:hover .equipment-product__overlay-img {
+  transform: translate(-50%, -50%);
+}
+.equipment-product:hover .arrow-btn-wrapper {
+  background: #FD6E39;
+}
+.equipment-product:hover .arrow-btn-wrapper::before {
+  width: 0.87rem;
+}
+.equipment-product:hover .arrow-btn-wrapper .arrow-btn-img {
+  transform: translate(-7px, -12px);
+}
+.equipment-product:hover .equipment-product__title {
+  color: #fff;
+}
+.equipment-product:hover .equioment-product__more-text {
+  color: #fff;
+}
+
+.equipment-product__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  max-width: 360px;
+  z-index: 11;
+  transition: all 0.16s ease;
+}
+
+.equipment-product__overlay-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, 50%);
+  width: 40px;
+  height: 40px;
+  transition: all 0.16s ease;
+}
+
+.arrow-btn-wrapper {
+  z-index: 11;
+}
+
+.equipment-product__img {
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.equioment-product__more-text {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 11;
+  transition: all 0.16s ease;
+}
+
+/* .label-section.services-page {
+  background-image: url("../images/services-label-img.svg");
+} */
+
+.problems-and-tasks-section {
+  padding-top: 128px;
+}
+.problems-and-tasks-section .titles-container {
+  width: 872px;
+}
+.problems-and-tasks-section .section-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 8px 0 24px 0;
+  padding-right: 32px;
+}
+
+.tasks-tile {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+
+.what-tasks-section .titles-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.what-tasks-section .tasks-tile {
+  margin: 0;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 416px);
+  gap: 40px;
+}
+
+
+.tasks-item {
+  width: 416px;
+  height: 136px;
+  padding-left: 40px;
+  padding-right: 16px;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+  margin-left: 40px;
+  margin-top: 40px;
+  background-image: url("../images/orange-bullet.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+.what-tasks-section .tasks-item {
+  margin: 0;
+}
+
+.tasks-item__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #2D3540;
+}
+
+/* .label-section.about-company-page {
+  background-image: url("../images/about-company-label-img.svg");
+} */
+
+.about-company-intro-section {
+  padding-top: 80px;
+}
+
+.about-company-intro-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 28px;
+  position: relative;
+  width: 880px;
+}
+.about-company-intro-title:before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about-company-intro-img {
+  margin-top: 64px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.years-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.years-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.year {
+  padding-left: 256px;
+  padding-right: 24px;
+  display: flex;
+  margin-top: 48px;
+}
+.year:first-child {
+  margin-top: 0;
+}
+
+.year__title {
+  color: #FD6E39;
+  font-family: Oswald;
+  font-size: 64px;
+  font-weight: 200;
+  line-height: normal;
+  padding-top: 16px;
+  padding-left: 32px;
+  border-top: 1px solid #C3CCE0;
+  border-left: 1px solid #C3CCE0;
+  height: 111px;
+  width: 160px;
+  min-width: 160px;
+}
+
+.year__text-container {
+  padding-top: 54px;
+  padding-bottom: 24px;
+  margin-left: 40px;
+}
+.year__text-container ul {
+  margin-top: 8px;
+}
+.year__text-container ul li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #2D3540;
+  padding-left: 40px;
+  background: url("../images/orange-bullet.svg") no-repeat 9px 9px;
+}
+
+
+
+.year__text-title {
+  font-family: Oswald;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.year__text {
+  color: #2D3540;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 16px;
+}
+
+.year__text-subtitle {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #2D3540;
+}
+
+.advantages-section {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background-color: #F7F8FC;
+}
+.advantages-section .titles-container {
+  width: 100%;
+}
+.advantages-section .section-subtitle {
+  font-size: 30px;
+}
+
+.advantages-tile {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+  margin-top: 48px;
+}
+
+.advantages-item {
+  width: 416px;
+  height: 136px;
+  padding-left: 40px;
+  padding-right: 16px;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+  margin-left: 40px;
+  margin-top: 40px;
+  background-image: url("../images/orange-bullet.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+.advantages-item__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #2D3540;
+  display: flex;
+  flex-direction: column;
+}
+.advantages-item__text span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #2D3540;
+  margin-top: 16px;
+}
+
+.health-safety-and-environment-section {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+.health-safety-and-environment-section .titles-container {
+  width: 100%;
+}
+.health-safety-and-environment-section .section-title {
+  width: 100%;
+}
+.health-safety-and-environment-section .section-subtitle {
+  font-size: 30px;
+}
+
+.safety-tile {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -48px;
+}
+
+.safety-item {
+  width: 410px;
+  margin-top: 64px;
+  margin-left: 48px;
+}
+
+.safety-item__img {
+  width: 128px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.safety-item__text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2D3540;
+  margin-top: 32px;
+}
+
+/* .label-section.completed-projects-page {
+  background-image: url("../images/completed-projects-label-img.svg");
+} */
+
+.completed-projects-tile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  margin-left: -32px;
+}
+
+.completed-projects-tile__item {
+  position: relative;
+  width: 411px;
+  margin-left: 32px;
+  margin-top: 32px;
+}
+.completed-projects-tile__item .services-tile__item-img {
+  width: 411px;
+  height: 237px;
+}
+.completed-projects-tile__item .animation-item__overlay-wrapper,
+.completed-projects-tile__item .tile-animation__overlay {
+  width: 411px;
+  height: 237px;
+}
+.completed-projects-tile__item:hover .tile-animation__overlay {
+  opacity: 1;
+}
+.completed-projects-tile__item:hover .tile-animation__overlay-img {
+  transform: translate(-50%, -50%);
+}
+.completed-projects-tile__item:hover .completed-projects-tile__item-title {
+  color: #FD6E39;
+}
+.completed-projects-tile__item .completed-projects-tile__item-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.completed-projects-tile__category-label {
+  position: absolute;
+  top: 205px;
+  left: 0;
+  padding: 8px;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background: #0E1114;
+  max-width: 411px;
+  z-index: 10;
+}
+
+/* .label-section.service-center-page {
+  background-image: url("../images/service-center-label-img.svg");
+} */
+
+.label-section__image {
+  height: 100%;
+}
+
+.service-center-intro-section {
+  padding-top: 80px;
+  padding-bottom: 128px;
+}
+
+.service-center-intro__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 28px;
+  position: relative;
+  width: 864px;
+}
+.service-center-intro__title:before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.service-center-intro__info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.service-center-intro__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 416px;
+  padding-right: 10px;
+}
+
+.service-center-intro__img {
+  width: 864px;
+  height: 486px;
+  object-fit: cover;
+}
+
+.workshops-section {
+  background: #F7F8FC;
+  padding: 128px 0;
+}
+.workshops-section .titles-container {
+  width: 100%;
+}
+.workshops-section .section-subtitle {
+  font-size: 30px;
+}
+
+.workhops-tile {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -48px;
+}
+
+.workshops-tile__item {
+  width: 410px;
+  margin-left: 48px;
+  margin-top: 48px;
+}
+
+.wokrshops-tile__item-img {
+  width: 410px;
+  height: 231px;
+}
+
+.workshops-tile__item-text {
+  height: 120px;
+  padding-left: 32px;
+  padding-right: 24px;
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background: url("../images/orange-bullet.svg") no-repeat 8px 8px;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+}
+
+.center-capability-section {
+  padding: 128px 0;
+}
+.center-capability-section .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-capability__img {
+  width: 416px;
+  height: 416px;
+  object-fit: cover;
+}
+
+.center-capability__info-container {
+  margin-left: 48px;
+}
+
+.center-capability__info-title,
+.location__info-title,
+.center-complecting__info-title {
+  color: #FD6E39;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  width: 416px;
+  padding-bottom: 24px;
+  border-right: 1px solid #0E1114;
+  border-bottom: 1px solid #0E1114;
+}
+
+.center-capavility__into-text,
+.location__into-text,
+.center-complecting__into-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 32px;
+}
+
+.location-section {
+  padding: 128px 0;
+  background: #F7F8FC;
+}
+.location-section .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location__img {
+  width: 864px;
+  height: 486px;
+  object-fit: cover;
+}
+
+.location__into-text {
+  width: 416px;
+}
+
+.center-complecting-section {
+  padding: 128px 0;
+}
+.center-complecting-section .wrapper {
+  display: flex;
+}
+
+.center-complecting__img {
+  width: 416px;
+  height: 505px;
+}
+
+.center-complecting__info-container {
+  margin-left: 48px;
+}
+
+.how-we-work-section {
+  padding: 128px 0;
+  background: #F7F8FC;
+}
+.how-we-work-section .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.how-we-work__info-container {
+  border-right: 1px solid #0E1114;
+  border-bottom: 1px solid #0E1114;
+  width: 416px;
+  height: 133px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  margin-top: 8px;
+}
+
+.how-we-work__info-title {
+  color: #FD6E39;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.how-we-work__into-text {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.managers-section {
+  padding: 128px 0;
+}
+
+.managers-tile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -48px;
+}
+
+.managers-tile__item {
+  margin-left: 48px;
+  margin-top: 48px;
+  width: 296px;
+}
+
+.managers-tile__item-img {
+  width: 296px;
+  height: 370px;
+  object-fit: cover;
+}
+
+.managers-tile__name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-top: 12px;
+}
+
+.managers-tile__title {
+  color: #2D3540;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  padding: 0 16px;
+  border-left: 1px solid #FD6E39;
+  width: 100%;
+}
+
+.documents-intro-section {
+  padding-top: 128px;
+}
+
+.documents-intro__title {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 28px;
+  position: relative;
+  width: 880px;
+}
+.documents-intro__title:before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.documents-section {
+  padding-top: 48px;
+  padding-bottom: 128px;
+}
+.documents-section .wrapper {
+  display: flex;
+}
+
+.documents-text {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  width: 416px;
+}
+
+.documents-container {
+  margin-left: 48px;
+}
+
+.document {
+  padding: 24px 0;
+  border-top: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+  position: relative;
+}
+
+.document__title {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 800px;
+}
+
+.document-link {
+  background: url("../images/download-icon.svg") no-repeat center center;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.media-intro-section {
+  padding-top: 128px;
+}
+
+.media-intro__title {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 28px;
+  position: relative;
+  width: 880px;
+}
+.media-intro__title:before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.videos-section {
+  padding-top: 48px;
+  padding-bottom: 128px;
+}
+
+.video-wrapper {
+  display: flex;
+}
+
+.video-wrapper + .video-wrapper {
+  margin-top: 48px;
+}
+
+.video__text {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 18px;
+  margin-left: 48px;
+  position: relative;
+}
+.video__text::before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.career-intro-section {
+  padding-top: 128px;
+}
+
+.career-intro__title {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 28px;
+  position: relative;
+  width: 880px;
+}
+.career-intro__title:before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vacancies-section {
+  padding-top: 62px;
+  padding-bottom: 128px;
+}
+
+.vacancies-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #0E1114;
+  border-right: 1px solid #0E1114;
+}
+
+.vacancy__trigger {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.vacancy__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.plus-icon-container {
+  background: #0E1114;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.16s ease;
+}
+.plus-icon-container img {
+  transform: rotate(0);
+}
+
+.vacancy__info-wrapper {
+  overflow: hidden;
+  transition: all 0.16s ease;
+}
+
+.vacancy__info-slice {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+.vacancy__info-key {
+  color: #C3CCE0;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  min-width: 208px;
+}
+
+.vacancy__info-value {
+  margin-left: 40px;
+}
+.vacancy__info-value li {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2D3540;
+  padding-left: 32px;
+  background: url("../images/orange-bullet.svg") no-repeat 8px 8px;
+}
+.vacancy__info-value li + li {
+  margin-top: 12px;
+}
+
+.vacancy__info-text {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 700px;
+}
+.vacancy__info-text a {
+  text-decoration: underline;
+}
+
+.vacancy__btn-link {
+  background: #0E1114;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  padding: 16px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.vacancy__btn-link:hover {
+  background: #FD6E39;
+}
+.full-reviews-section {
+  padding-top: 128px;
+}
+.full-reviews-section .reviews-tile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+.full-reviews-section .swiper-slide {
+  position: relative;
+  padding: 2.25rem 1.5rem 1.75rem 0;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: Oswald;
+  font-size: 0.56rem;
+  font-weight: 500;
+  line-height: 0.75rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  background: #E6EAF6;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__intro-container {
+  display: flex;
+  /*justify-content: space-between;*/
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__partner-title {
+  font-size: 0.87rem;
+  font-weight: 700;
+  line-height: 1.37rem;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__short-description {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__title-container {
+  margin-left: 1rem;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__text {
+  text-overflow: ellipsis;
+  font-size: 0.81rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-top: 0.75rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.16s ease;
+  max-height: 80px;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__text.textRows4 {
+  -webkit-line-clamp: 4;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__text.textRows13 {
+  -webkit-line-clamp: 13;
+}
+.full-reviews-section .swiper-slide .reviewsSwiper__text.active {
+  max-height: 260px;
+}
+.full-reviews-section .reviewsSwiper-button-next .arrow-btn-wrapper {
+  cursor: pointer;
+}
+.full-reviews-section .reviesSwiper__btns-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.full-reviews-section .reviewsSwiper__expand-btn {
+  border: none;
+  background: transparent;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px dashed #0E1114;
+  padding-bottom: 0.25rem;
+  transition: all 0.16s ease;
+}
+.full-reviews-section .reviewsSwiper__expand-btn:hover {
+  color: #FD6E39;
+}
+.full-reviews-section .reviewsSwiper__popup-btn {
+  border: none;
+  background: transparent;
+  font-family: Oswald;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.full-reviews-section .reviewsSwiper__popup-btn:hover {
+  color: #FD6E39;
+}
+.full-reviews-section .arrow-btn-wrapper::before, .full-reviews-section .arrow-btn-wrapper::after {
+  display: none !important;
+}
+.full-reviews-section .reviewsSwiperSlide {
+  margin-top: 48px;
+  /*width: 416px;*/
+  max-width: 620px;
+  margin-left: 40px;
+}
+/*.full-reviews-section .reviewsSwiperSlide:first-child {
+  width: 1328px;
+}
+.full-reviews-section .reviewsSwiperSlide:first-child .reviewsSwiper__intro-container {
+  justify-content: flex-start;
+}
+.full-reviews-section .reviewsSwiperSlide:first-child .reviewsSwiper__date {
+  left: 0;
+}
+.full-reviews-section .reviewsSwiperSlide:nth-child(5) {
+  width: 644px;
+}
+.full-reviews-section .reviewsSwiperSlide:nth-child(6) {
+  width: 644px;
+}*/
+
+.label-section.services-page {
+  position: relative;
+}
+
+.label-section__back-link {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: black;
+  padding-left: 30px;
+  background-image: url("../images/arrow-left-black.svg");
+  background-repeat: no-repeat;
+  background-position: 6px center;
+  filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(53deg) brightness(109%) contrast(106%);
+  transition: all 0.16s ease;
+}
+.label-section__back-link:hover {
+  background-position: 0 center;
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+}
+
+.our-opportunities-section {
+  padding: 128px 0;
+}
+.our-opportunities-section .section-title {
+  margin: 8px 0 32px 0;
+}
+.our-opportunities-section .section-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.our-oppotrunities__main-info {
+  display: flex;
+  margin-top: 48px;
+}
+
+.our-oppotrunities__leftside {
+  border-right: 1px solid #0E1114;
+}
+
+.our-opportunities__leftside-text-container {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+.our-opportunities__leftside-text-container ul li {
+  margin-top: 8px;
+  padding-left: 40px;
+  background: url("../images/orange-bullet.svg") no-repeat 10px 10px;
+}
+
+.our-opportunities__leftside-text {
+  margin-top: 32px;
+}
+.our-opportunities__leftside-text:first-child {
+  margin-top: 0;
+}
+
+.our-opportunities__leftside-link-container {
+  width: 100%;
+  border-top: 1px solid #0E1114;
+}
+
+.our-opportunities__leftside-link {
+  margin-top: 32px;
+  display: inline-block;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  background-color: #0E1114;
+  padding: 12px 48px 12px 12px;
+  background-image: url(../images/arrow-right-white.svg);
+  background-repeat: no-repeat;
+  background-position: 92% center;
+  transition: all 0.16s ease;
+}
+.our-opportunities__leftside-link:hover {
+  background-position: 97% center;
+  background-color: #FD6E39;
+}
+
+.our-oppotrunities__rightside {
+  margin-left: 40px;
+}
+.our-oppotrunities__rightside-img {
+  width: 644px;
+  height: 558px;
+}
+
+.additional-service {
+  width: calc(100% / 2 - 48px);
+}
+
+.additional-service img {
+  width: 100%;
+  height: auto;
+}
+
+.additional-services-section {
+  padding: 80px 0;
+  background: #F7F8FC;
+}
+.additional-services-section .titles-container {
+  width: 648px;
+}
+.additional-services-section .section-subtitle {
+  font-size: 32px;
+}
+.additional-services-section .section-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: 20px 0 24px 0;
+}
+
+.additional-services {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.additiona-service-img {
+  width: 648px;
+  height: 364px;
+  object-fit: cover;
+}
+
+.additional-service__text {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-top: 24px;
+}
+
+.project-options-section {
+  padding: 128px 0;
+}
+.project-options-section .titles-container {
+  width: 648px;
+}
+.project-options-section .section-subtitle {
+  font-size: 32px;
+}
+.project-options-section .section-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: 20px 0 24px 0;
+}
+
+.projects-options-wrapper {
+  margin-top: 48px;
+}
+
+.projects-option {
+  display: flex;
+  margin-top: 40px;
+}
+
+.projects-option__img {
+  width: 648px;
+  height: 364px;
+  object-fit: cover;
+}
+
+.projects-option__info-wrapper {
+  margin-left: 40px;
+}
+.projects-option__info-wrapper ul li {
+  margin-top: 8px;
+  padding-left: 30px;
+  background: url("../images/orange-bullet.svg") no-repeat 6px 6px;
+}
+
+.projects-option__info-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.projects-option__info-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.partners-section {
+  padding: 80px 0;
+}
+.partners-section .wrapper {
+  position: relative;
+}
+.partners-section .swiper-container {
+  overflow: hidden;
+}
+.partners-section .section-subtitle {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.partners-section .section-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 8px 0 24px 0;
+}
+.partners-section .titles-container {
+  width: 644px;
+}
+.partners-section .arrow-btn-wrapper {
+  width: 48px;
+  height: 48px;
+  right: -33px;
+  top: 145px;
+}
+.partners-section .arrow-btn-wrapper::after {
+  display: none !important;
+}
+.partners-section .swiper-button-next:after {
+  display: none !important;
+}
+
+.anchors-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 80px;
+  bottom: 120px;
+}
+
+.anchors__anchor {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.application-areas-section {
+  padding-top: 80px;
+}
+
+.application-areas-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-area {
+  position: relative;
+  width: 246px;
+}
+.application-area .tile-animation__overlay-img {
+  width: 28px;
+  height: 28px;
+}
+.application-area:hover .application-area__title {
+  color: #FD6E39;
+}
+.application-area:hover .tile-animation__overlay {
+  opacity: 1;
+}
+.application-area:hover .tile-animation__overlay .tile-animation__overlay-img {
+  transform: translate(-50%, -50%);
+}
+
+.application-area__item-img {
+  width: 246px;
+  height: 138px;
+  object-fit: cover;
+}
+
+.animation-item__overlay-wrapper {
+  width: 246px;
+  height: 138px;
+  position: relative;
+}
+
+.application-area__title {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 16px;
+  transition: all 0.16s ease;
+}
+
+.what-tasks-section {
+  padding-bottom: 80px;
+}
+
+.product-info-section {
+  padding: 80px 0;
+}
+.product-info-section .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-info-slice {
+  margin-top: 48px;
+  width: 640px;
+}
+.product-info-slice .section-subtitle {
+  font-size: 32px;
+}
+.product-info-slice .section-title {
+  font-size: 28px;
+  line-height: 36px;
+  margin: 20px 0 24px 0;
+}
+.product-info-slice ul {
+  margin-top: 24px;
+}
+.product-info-slice ul li {
+  color: #2D3540;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 32px;
+  background: url("../images/orange-bullet.svg") no-repeat 8px 8px;
+  margin-top: 12px;
+}
+
+.product-info-slice__link {
+  padding: 16px 48px 16px 16px;
+  display: inline-block;
+  background-color: #0E1114;
+  font-family: Oswald;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  background-image: url("../images/white-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 94% center;
+  transition: all 0.16s ease;
+}
+.product-info-slice__link:hover {
+  background-position: 98% center;
+  background-color: #FD6E39;
+}
+
+.technical-specification__title {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #FD6E39;
+  margin-top: 24px;
+}
+
+.technical-specification__raw {
+  display: flex;
+  padding: 16px 0;
+  border-bottom: 1px solid #0E1114;
+  position: relative;
+}
+
+.technical-specification__key {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.technical-specification__value {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 324px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.similar-products-section {
+  background: #F7F8FC;
+  padding: 80px 0;
+}
+.similar-products-section .wrapper {
+  position: relative;
+}
+.similar-products-section .similarProductsSwiper-button-next {
+  right: -19px;
+  top: 392px;
+}
+.similar-products-section .similarProductsSwiper-button-prev {
+  right: -19px;
+  top: 392px;
+}
+.similar-products-section .similarProductsSwiper-button-next .arrow-btn-wrapper {
+  width: 48px;
+  height: 48px;
+}
+
+.similar-product__item {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  transition: all 0.16s ease;
+}
+.similar-product__item .similar-product__item-img {
+  width: 100%;
+}
+.similar-product__item:hover .similar-product__item-title {
+  color: #fff;
+}
+.similar-product__item:hover .similar-product__item-overlay {
+  opacity: 0.6;
+}
+.similar-product__item:hover .similar-product__more-text {
+  color: #fff;
+}
+.similar-product__item:hover .arrow-btn-wrapper {
+  background: #FD6E39;
+}
+.similar-product__item:hover .arrow-btn-img {
+  transform: translate(-7px, -12px);
+}
+.similar-product__item:hover .arrow-btn-wrapper::before {
+  width: 0.87rem;
+}
+.similar-product__item:hover .similar-product__overlay-img-wrapper {
+  width: 8rem;
+}
+
+.similar-product__item-title {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 11;
+}
+
+.similar-product__more-text {
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  transition: all 0.16s ease;
+  z-index: 11;
+}
+
+.similar-product__item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0E1114;
+  opacity: 0;
+  transition: all 0.16s ease;
+  background-image: url("../images/battery-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.16s ease;
+}
+
+.similar-product__overlay-img-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8rem;
+  width: 0;
+  z-index: 3;
+  transition: all 0.16s ease;
+}
+
+.similar-product__overlay-img {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  object-fit: cover;
+  object-position: right;
+}
+
+.our-capabilities-section {
+  padding: 80px 0;
+}
+.our-capabilities-section .section-subtitle {
+  font-size: 32px;
+}
+.our-capabilities-section .section-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.our-capabilities-tile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  margin-left: -48px;
+}
+
+.our-capabilities-tile__item {
+  width: 410px;
+  height: 176px;
+  border-right: 1px solid #C3CCE0;
+  border-bottom: 1px solid #C3CCE0;
+  padding: 0 32px 24px 0;
+  margin-left: 48px;
+  margin-top: 48px;
+  cursor: pointer;
+  position: relative;
+}
+.our-capabilities-tile__item:hover .our-capabilities-tile__item-link-img {
+  right: 0;
+  opacity: 1;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+}
+.our-capabilities-tile__item:hover .our-capabilities-tile__item-link {
+  color: #0E1114;
+}
+.our-capabilities-tile__item:hover .our-capabilities-tile__item-text {
+  color: #FD6E39;
+}
+
+.our-capabilities-tile__item-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  transition: all 0.16s ease;
+}
+
+.our-capabilities-tile__item-link {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: #FD6E39;
+  padding-right: 32px;
+}
+
+.our-capabilities-tile__item-link-img {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.16s ease;
+  opacity: 0;
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+}
+
+.application-areas-section {
+  padding: 80px 0 48px;
+}
+.application-areas-section .section-subtitle {
+  font-size: 32px;
+}
+.application-areas-section .section-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.application-areas-section .wrapper {
+  /*max-width: 1760px;*/
+}
+
+/*==================== 14.08.2023 ===================*/
+.equipment-rental-intro-section {
+  padding-top: 80px;
+}
+
+.equipment-rental-intro__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 28px;
+  position: relative;
+  width: 864px;
+}
+.equipment-rental-intro__title:before {
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.problems-and-tasks-section.equipment-rental {
+  padding-top: 48px;
+}
+.problems-and-tasks-section.equipment-rental .section-subtitle {
+  font-size: 32px;
+}
+.problems-and-tasks-section.equipment-rental .tasks-item {
+  height: 168px;
+  padding-left: 32px;
+  padding-right: 10px;
+}
+.problems-and-tasks-section.equipment-rental .tasks-item__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.poster-section {
+  margin-top: 48px;
+  margin-bottom: 128px;
+  color: #fff;
+}
+.poster-section .wrapper {
+  background: #0E1114;
+  display: flex;
+}
+
+.poster-leftside {
+  padding: 64px 0 16px 64px;
+  border-right: 1px solid #fff;
+}
+
+.poster-leftside__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  padding-top: 24px;
+  position: relative;
+  padding-bottom: 151px;
+  border-bottom: 1px solid #fff;
+  padding-right: 24px;
+}
+.poster-leftside__title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+}
+
+.poster-leftside__link {
+  color: #fff;
+  display: inline-block;
+  padding: 24px 48px 24px 0;
+  margin-top: 8px;
+  background-image: url("../images/arrow-right-white.svg");
+  background-position: 92% center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  transition: all 0.16s ease;
+}
+.poster-leftside__link:hover {
+  background-position: 98% center;
+}
+
+.poster-rightside__img {
+  width: 912px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.major-repair-main-info-section {
+  padding-top: 48px;
+}
+.major-repair-main-info-section .wrapper {
+  display: flex;
+}
+
+.major-repair-main-info-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-right: 48px;
+}
+
+.major-repair-main-info-img {
+  width: 864px;
+  height: 486px;
+  object-fit: cover;
+}
+
+.load-tests-intro__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 880px;
+  margin-top: 8px;
+}
+
+.load-tests-main-info-section {
+  padding-top: 48px;
+  padding-bottom: 128px;
+}
+.load-tests-main-info-section .wrapper {
+  display: flex;
+}
+
+.load-tests-main-info-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-right: 48px;
+}
+
+.load-tests-main-info-img {
+  width: 864px;
+  height: 486px;
+  object-fit: cover;
+}
+
+.map-section {
+  padding: 80px 0;
+}
+.map-section .wrapper {
+  max-width: 1760px;
+}
+.map-section .wrapper .section-subtitle {
+  font-size: 32px;
+}
+.map-section .wrapper .section-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 48px;
+}
+
+.addresses-wrapper {
+  display: none;
+}
+
+.map-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map-accordion-wrapper {
+  position: absolute;
+  top: 133px;
+  right: 128px;
+  background: #fff;
+  width: 320px;
+  padding: 0 24px;
+}
+.map-accordion-wrapper.lastElementOpen {
+  padding: 0 24px 24px 24px;
+}
+
+.map-accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  background-image: url("../picture/plus-icon-black.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  cursor: pointer;
+}
+.map-accordion-trigger .map-accordion-trigger__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  transition: all 0.16s ease;
+}
+.map-accordion-trigger.active {
+  background-image: url("../picture/minus-icon-orange.svg");
+}
+.map-accordion-trigger.active .map-accordion-trigger__title {
+  color: #FD6E39;
+}
+
+.map-accordion-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.16s ease;
+}
+
+.map-accordion-info-text {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.map-accordion-info-link {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.map-contact-us-btn {
+  text-align: center;
+  background: #0E1114;
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 16px 0;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.map-contact-us-btn:hover, .map-contact-us-btn.active {
+  background: #FD6E39;
+}
+
+.map-pin {
+  position: absolute;
+  z-index: 1;
+  transition: all 0.16s ease;
+  cursor: pointer;
+}
+.map-pin.moscow {
+  top: 267px;
+  left: 439px;
+}
+.map-pin.spb {
+  top: 61px;
+  left: 248px;
+}
+.map-pin.tumen {
+  top: 200px;
+  left: 1167px;
+}
+.map-pin.atyrau {
+  top: 629px;
+  left: 812px;
+}
+.map-pin:hover, .map-pin.active {
+  scale: 1.5;
+  transform: translateY(-5px);
+}
+/*=================== !14.08 2023 ===================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #0E1114;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #0E1114;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.intro-mobile {
+  display: none;
+}
+
+.intro-section {
+  background: #E6EAF6;
+  padding-top: 3.437rem;
+  padding-bottom: 3.437rem;
+}
+.intro-section .wrapper {
+  display: flex;
+}
+
+.intro__leftside {
+  width: 30rem;
+  border-right: 1px solid #0E1114;
+}
+
+.intro__title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  padding: 3rem 4.25rem 2.062rem 0;
+  border-bottom: 1px solid #0E1114;
+}
+
+.intro__more-btn {
+  background-color: transparent;
+  border: none;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  margin-top: 1.5rem;
+  color: #000;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+  cursor: pointer;
+}
+.intro__more-btn:hover {
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+}
+
+.intro__rightside {
+  position: relative;
+  /*height: 18.062rem;*/
+}
+
+.services-section {
+  padding: 8rem 0;
+}
+.services-section .titles-container {
+  width: 40rem;
+}
+.services-section .section-subtitle {
+  font-size: 2rem;
+}
+
+.services-tile__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.services-tile__item {
+  width: 25.687rem;
+  margin-bottom: 2rem;
+  margin-right: 1.937rem;
+  /*cursor: pointer;*/
+}
+.services-tile__item .services-tile__item-img {
+  width: 25.687rem;
+}
+.services-tile__item .animation-item__overlay-wrapper {
+  width: 25.687rem;
+  height: 14.437rem;
+  position: relative;
+}
+.services-tile__item:hover .tile-item__title {
+  /*color: #FD6E39;*/
+}
+.services-tile__item:hover .tile-animation__overlay {
+  opacity: 1;
+}
+.services-tile__item:hover .tile-animation__overlay .tile-animation__overlay-img {
+  transform: translate(-50%, -50%);
+}
+
+.tile-animation__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FD6E39;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.16s ease;
+}
+.tile-animation__overlay:hover {
+  opacity: 1;
+}
+.tile-animation__overlay:hover .tile-animation__overlay-img {
+  transform: translate(-50%, -50%);
+}
+
+.tile-animation__overlay-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, 50%);
+  width: 56px;
+  height: 56px;
+  transition: all 0.16s ease;
+}
+
+.tile-item__title {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+  transition: all 0.16s ease;
+}
+
+.service-center__btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.service-center__btn-link {
+  font-family: Oswald;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  background-color: #0E1114;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #fff;
+  width: min-content;
+  background-image: url("../images/arrow-right-white.svg");
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  transition: all 0.16s ease;
+}
+.service-center__btn-link:hover {
+  background-position: 95% center;
+  animation-name: arrow-animation;
+  animation-duration: 0.16s;
+  background-color: #FD6E39;
+}
+
+.equipment-section {
+  padding: 8rem 0;
+  background-color: #E6EAF6;
+  background-image: url("../images/equipment-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right 166px;
+}
+
+.equipment-tile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.equipment-tile .equioment-tile__item-title {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.equioment-tile__more-text {
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  transition: all 0.16s ease;
+}
+
+.arrow-btn-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  background: #0E1114;
+  transition: all 0.16s ease;
+}
+.equipment-product .arrow-btn-wrapper::before {
+  content: " ";
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: all 0.16s ease;
+}
+.equipment-section .arrow-btn-wrapper::before {
+  content: " ";
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: all 0.16s ease;
+}
+.arrow-btn-wrapper::before {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: all 0.16s ease;
+}
+.arrow-btn-wrapper:hover {
+  background: #FD6E39;
+}
+.arrow-btn-wrapper:hover::before {
+  width: 0.875rem;
+}
+.arrow-btn-wrapper:hover .arrow-btn-img {
+  transform: translate(-7px, -12px);
+}
+
+.arrow-btn-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-11px, -12px);
+  transition: all 0.16s ease;
+}
+
+.equipment-tile__item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0E1114;
+  opacity: 0;
+  transition: all 0.16s ease;
+  /*background-image: url("../images/battery-icon.svg");*/
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.16s ease;
+}
+
+.equipment-tile__overlay-img-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8rem;
+  width: 0;
+  z-index: 3;
+  transition: all 0.16s ease;
+}
+
+.equipment-tile__overlay-img {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  object-fit: cover;
+  object-position: right;
+}
+
+.equipment-tile__last-item {
+  position: relative;
+  width: 27.625rem;
+  height: 27.625rem;
+  cursor: pointer;
+  border-right: 1px solid #0E1114;
+  border-bottom: 1px solid #0E1114;
+}
+.equipment-tile__last-item:hover {
+  border-right: 1px solid #FD6E39;
+  border-bottom: 1px solid #FD6E39;
+}
+.equipment-tile__last-item:hover .arrow-animation {
+  background-position: right center;
+  filter: invert(46%) sepia(75%) saturate(958%) hue-rotate(337deg) brightness(103%) contrast(98%);
+}
+.equipment-tile__last-item:hover .equipment-tile__last-item-text {
+  color: #FD6E39;
+}
+
+.equipment-tile__last-item-text {
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+}
+
+.equipment-tile__item {
+  width: 27.625rem;
+  height: 27.625rem;
+  background: #ffffff;
+  position: relative;
+  transition: all 0.16s ease;
+  cursor: pointer;
+}
+.equipment-tile__item:nth-child(even) {
+ /* background: #F7F8FC;*/
+  background: #FFFFFF;
+}
+.equipment-tile__item:hover .equioment-tile__item-title {
+  color: #fff;
+}
+.equipment-tile__item:hover .equipment-tile__item-overlay {
+  opacity: 0.6;
+}
+.equipment-tile__item:hover .equioment-tile__more-text {
+  color: #fff;
+}
+.equipment-tile__item:hover .arrow-btn-wrapper {
+  background: #FD6E39;
+}
+.equipment-tile__item:hover .arrow-btn-img {
+  transform: translate(-7px, -12px);
+}
+.equipment-tile__item:hover .arrow-btn-wrapper::before {
+  width: 0.875rem;
+}
+.equipment-tile__item:hover .equipment-tile__overlay-img-wrapper {
+  width: 8rem;
+}
+
+.equipment-tile__item-img {
+  width: 100%;
+}
+/*==========equipments-section=========*/
+.equipments-section {
+  background: #F7F8FC;
+  padding: 8rem 0;
+}
+.equipments-section .wrapper {
+  position: relative;
+}
+.equipments-section .wrapper .arrow-btn-wrapper {
+  right: -1.5rem;
+  top: 13.5rem;
+}
+.equipments-section .wrapper .swiper-button-next:after,
+.equipments-section .wrapper .swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+.equipments-section .opening-wrapper__link {
+  background-color: transparent;
+  border: none;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  margin-top: 1.5rem;
+  color: #000;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+}
+.equipments-section .section-title {
+  /*width: 54.5rem;*/
+  margin-top: 0;
+}
+.equipments-section .opening-wrapper__text {
+  margin-left: 2.5rem;
+}
+
+
+/*==========!equipments-section=========*/
+.projects-section {
+  background: #F7F8FC;
+  padding: 8rem 0;
+}
+.projects-section .wrapper {
+  position: relative;
+}
+.projects-section .wrapper .arrow-btn-wrapper {
+  right: -1.5rem;
+  top: 13.5rem;
+}
+.projects-section .wrapper .swiper-button-next:after,
+.projects-section .wrapper .swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+.projects-section .opening-wrapper__link {
+  background-color: transparent;
+  border: none;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  margin-top: 1.5rem;
+  color: #000;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+}
+.projects-section .section-title {
+  width: 54.5rem;
+  margin-top: 0;
+}
+.projects-section .opening-wrapper__text {
+  margin-left: 2.5rem;
+}
+
+.projectsSwiper {
+  margin-top: 3rem;
+}
+
+.service-center-section {
+  padding: 8rem 0;
+}
+.service-center-section .titles-container {
+  width: 100%;
+}
+
+.service-center__content-wrapper {
+  display: flex;
+  margin-top: 3rem;
+  height: 30.625rem;
+}
+
+.service-center-leftside {
+  width: 26rem;
+  border-right: 1px solid #0E1114;
+  position: relative;
+}
+
+.service-center__text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.service-center__btn-container {
+  width: 100%;
+  border-top: 1px solid #0E1114;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5.062rem;
+}
+
+.service-center-rightside {
+  margin-left: 2.5rem;
+}
+
+.service-center-rightside__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-section {
+  background: #F7F8FC;
+  padding: 8rem 0;
+}
+.news-section .wrapper {
+  position: relative;
+}
+.news-section .wrapper .arrow-btn-wrapper {
+  right: -2rem;
+  top: 13.5rem;
+}
+.news-section .wrapper .swiper-button-next:after,
+.news-section .wrapper .swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+.news-section .section-opening-wrapper {
+  display: block;
+}
+.news-section .opening-wrapper__link {
+  background-color: transparent;
+  border: none;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  background-image: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  margin-top: 1.5rem;
+  color: #000;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+}
+
+.reviews-section {
+  padding: 8rem 0;
+}
+.reviews-section .wrapper {
+  position: relative;
+}
+.reviews-section .wrapper .arrow-btn-wrapper {
+  right: -2rem;
+  top: 13.5rem;
+}
+.reviews-section .wrapper .swiper-button-next:after,
+.reviews-section .wrapper .swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+.reviews-section .section-opening-wrapper {
+  display: block;
+}
+.reviews-section .opening-wrapper__link {
+  background-color: transparent;
+  border: none;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  background-image: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  margin-top: 1.5rem;
+  color: #000;
+  filter: invert(19%) sepia(25%) saturate(481%) hue-rotate(175deg) brightness(87%) contrast(90%);
+}
+
+.wrapper {
+  max-width: 83rem;
+  margin: 0 auto;
+}
+
+.special-hover {
+  position: relative;
+}
+.special-hover:hover {
+  filter: invert(52%) sepia(19%) saturate(2869%) hue-rotate(334deg) brightness(101%) contrast(98%);
+  border-right: 1px solid #000000;
+}
+.special-hover:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background: #000000;
+  transition: 0.16s all ease;
+}
+.special-hover:hover::before {
+  width: 100%;
+}
+
+.section-opening-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-opening-wrapper .opening-wrapper__text {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+  width: 688px;
+  margin-left: 3rem;
+}
+
+.opening-wrapper__link-container {
+  border-right: 1px solid #0E1114;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.opening-wrapper__link {
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  color: #000;
+  filter: invert(3%) sepia(3%) saturate(7232%) hue-rotate(168deg) brightness(92%) contrast(92%);
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  width: min-content;
+  white-space: nowrap;
+}
+
+.section-title {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  margin: 0.875rem 0 2rem 0;
+}
+
+.titles-container {
+  border-right: 1px solid #0E1114;
+  border-bottom: 1px solid #0E1114;
+}
+
+.section-title {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  margin: 1.25rem 0 2rem 0;
+}
+
+.section-subtitle {
+  color: #FD6E39;
+  font-family: Oswald;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.arrow-animation:hover {
+  animation: arrow-animation 0.16s;
+  background-position: 95% center;
+  filter: invert(52%) sepia(19%) saturate(2869%) hue-rotate(334deg) brightness(101%) contrast(98%);
+}
+
+.filters-container {
+  background: #F7F8FC;
+  margin-top: 48px;
+}
+
+.filters-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding-left: 24px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.filters-top:hover {
+  color: #FD6E39;
+}
+.filters-top.active .filters-top__btn {
+  background-color: #FD6E39;
+  background-image: url(../images/minus-icon.svg);
+}
+
+.filters-top__title {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.filters-top__btn {
+  background-color: #0E1114;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  background-image: url(../images/plus-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.filters-top__btn:hover {
+  background-color: #FD6E39;
+  background-image: url(../images/minus-icon.svg);
+}
+
+.filters-chosen {
+  display: flex;
+  width: calc(100% - 48px);
+  margin: 8px auto 0;
+  overflow: hidden;
+  max-height: 0;
+  padding-bottom: 0;
+  transition: all 0.16s ease;
+}
+
+.filters-chosen.active {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #C3CCE0;
+  max-height: fit-content;
+}
+
+.filters-chosen__close-all-btn {
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.filters-chosen__close-all-btn:hover::before, .filters-chosen__close-all-btn:hover::after {
+  background-color: #FD6E39;
+}
+
+.filters-chosen__close-all-btn:before,
+.filters-chosen__close-all-btn:after {
+  position: absolute;
+  left: 16px;
+  content: " ";
+  height: 18px;
+  width: 2px;
+  background-color: #0E1114;
+  top: 7px;
+  transition: all 0.16s ease;
+}
+
+.filters-chosen__close-all-btn:before {
+  transform: rotate(45deg);
+}
+
+.filters-chosen__close-all-btn:after {
+  transform: rotate(-45deg);
+}
+
+.filters-chosen__picked-btn {
+  margin-left: 8px;
+  position: relative;
+  color: #2D3540;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  background: #fff;
+  border: none;
+  border-radius: 56px;
+  padding: 8px 32px 8px 12px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.filters-chosen__picked-btn:hover {
+  color: #FD6E39;
+}
+.filters-chosen__picked-btn:hover::before, .filters-chosen__picked-btn:hover::after {
+  background-color: #FD6E39;
+}
+
+.filters-chosen__picked-btn:before,
+.filters-chosen__picked-btn:after {
+  position: absolute;
+  right: 17px;
+  content: " ";
+  height: 18px;
+  width: 2px;
+  background-color: #0E1114;
+  top: 7px;
+  transition: all 0.16s ease;
+}
+
+.filters-chosen__picked-btn:before {
+  transform: rotate(45deg);
+}
+
+.filters-chosen__picked-btn:after {
+  transform: rotate(-45deg);
+}
+
+.filters-inner {
+  transition: all 0.16s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.filters-inner__title {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 16px;
+}
+
+.filters-inner__tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -8px;
+}
+
+.filters-inner__wrapper {
+  padding: 0 24px 24px;
+}
+
+.filters-inner__tag {
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: #2D3540;
+  border-radius: 56px;
+  border-radius: 56px;
+  background: #fff;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-left: 8px;
+  transition: all 0.16s ease;
+  cursor: pointer;
+}
+.filters-inner__tag:hover {
+  color: #FD6E39;
+}
+
+.pagination-section {
+  margin-top: 48px;
+  margin-bottom: 80px;
+}
+.pagination-section .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__more-btn {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  height: 48px;
+  color: #fff;
+  background: #0E1114;
+  padding: 0 24px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.16s ease;
+}
+.pagination__more-btn:hover {
+  background: #FD6E39;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-btn {
+  width: 48px;
+  height: 48px;
+  margin-left: 8px;
+  background: transparent;
+  border: 1px solid #E6EAF6;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+.pagination-btn:hover {
+  border: 1px solid #0E1114;
+}
+.pagination-btn:first-child {
+  margin-left: 0;
+  background-image: url("../images/slider-arrow-prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pagination-btn:last-child {
+  background-image: url("../images/slider-arrow-next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pagination-btn:nth-last-child(3) {
+ /* border: none;*/
+}
+.document__meta-data {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 4px;
+  color: #C3CCE0;
+}
+
+@keyframes arrow-animation {
+  from {
+    background-position: 87% center;
+  }
+  to {
+    background-position: 95% center;
+  }
+}
+@media (max-width: 1800px) {
+  .footer__content-slice {
+    width: 11.25rem;
+  }
+  .titles-container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 1600px) {
+  .application-area,
+  .application-area__item-img,
+  .animation-item__overlay-wrapper {
+    width: 160px;
+  }
+  .application-area__item-img,
+  .animation-item__overlay-wrapper {
+    height: 90px;
+  }
+}
+@media (max-width: 1100px) {
+  .application-area,
+  .application-area__item-img,
+  .animation-item__overlay-wrapper {
+    width: 131px;
+  }
+  .application-area__item-img,
+  .animation-item__overlay-wrapper {
+    height: 74px;
+  }
+}
+@media (max-width: 992px) {
+  .application-area,
+  .application-area__item-img,
+  .animation-item__overlay-wrapper {
+    width: 110px;
+  }
+  .application-area__item-img,
+  .animation-item__overlay-wrapper {
+    height: 62px;
+  }
+}
+@media (max-width: 740px) {
+  .application-areas-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header {
+    padding: 0.5rem;
+  }
+  .header-nav ul {
+    display: flex;
+    align-items: center;
+  }
+  .header-nav ul .header-nav__li {
+    padding: 0.5rem 0.5rem 0.5rem 0;min-height:40px;
+	display:flex;align-items:center;
+  }
+  .header-nav ul .header-nav__li:hover {
+    padding: 0.5rem 0.4375rem 0.5rem 0;
+  }
+  .header-nav ul .header-nav__li:hover:first-child {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+  .header-nav ul .header-nav__li:hover:nth-child(2) {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+  .header-nav ul .header-nav__li + .header-nav__li {
+    margin-left: 1rem;
+  }
+  .wrapper,
+  .projectsSwiper,
+  .newsSwiper,
+  .reviewsSwiper {
+    max-width: 1064px;
+  }
+  .intro-section,
+  .services-section,
+  .equipment-section,
+  .projects-section,
+  .service-center-section,
+  .news-section,
+  .reviews-section,
+  .form-section {
+    padding: 44px 0;
+  }
+  .intro__leftside {
+    width: 20rem;
+  }
+  .intro__rightside {
+    width: 46.5rem;
+  }
+
+  .introSwiper .swiper-slide img {
+    width: 46.5rem;
+  }
+  .intro__title {
+    padding: 2rem 2.25rem 2.0625rem 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .services-tile__wrapper {
+    justify-content: space-between;
+  }
+  .equipment-tile {
+    justify-content: center;
+  }
+  .projects-section .section-title {
+    width: unset;
+  }
+  .projectsSwiper .animation-item__overlay-wrapper,
+  .newsSwiper .animation-item__overlay-wrapper {
+    width: 100%;
+    height: 176px;
+  }
+  .projectsSwiper .projectsSwiper-img,
+  .newsSwiper .newsSwiper-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .projectsSwiper .projectsSlider-title,
+  .newsSwiper .newsSlider-title {
+    margin-top: 12px;
+  }
+  .projectsSwiper .swiper-slide .projectsSlider__category-label,
+  .newsSwiper .swiper-slide .newsSlider__category-label {
+    font-size: 10px;
+    top: 144px;
+  }
+  .projects-section .wrapper .arrow-btn-wrapper,
+  .news-section .wrapper .arrow-btn-wrapper,
+  .reviews-section .wrapper .arrow-btn-wrapper {
+    right: -0.625rem;
+  }
+  .partners-section .swiper-container {
+    max-width: 1064px;
+    margin: 0 auto;
+  }
+  .location__img {
+    width: 688px;
+    height: 387px;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+  .location-section .wrapper {
+    flex-direction: column;
+  }
+  .location__into-text {
+    width: 100%;
+  }
+  .center-complecting-section .wrapper,
+  .center-capability-section .wrapper {
+    flex-direction: column-reverse;
+  }
+  .how-we-work-section .wrapper {
+    flex-direction: column;
+  }
+  .how-we-work-section video {
+    width: 688px;
+  }
+  .services-tile__item:last-of-type {
+    margin-right: auto;
+  }
+  .center-capability__info-container {
+    margin-left: 0;
+  }
+  .center-capability__img,
+  .center-complecting__img {
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+  .label-section__image {
+    opacity: .32;
+  }
+  .label-section__image_career {
+    opacity: .64;
+  }
+  .completed-projects-tile {
+    margin-left: 0;
+    display: grid;
+    justify-content: center;
+    gap: 64px;
+    grid-template-columns: 411px 411px;
+  }
+  .completed-projects-tile__item {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .media-intro__title {
+    max-width: 688px;
+  }
+  .video-wrapper video {
+    width: 328px;
+    height: 184px;
+  }
+  .documents-section .wrapper {
+    flex-direction: column;
+  }
+  .documents-container {
+    margin-left: 0;
+  }
+  .documents-intro__title,
+  .documents-text {
+    width: 100%;
+  }
+  .document {
+    margin: 24px 0;
+  }
+  .document__meta-data {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .what-tasks-section .tasks-tile {
+    grid-template-columns: repeat(2, 416px);
+  }
+}
+@media (max-width: 1100px) {
+  .wrapper,
+  .projectsSwiper,
+  .newsSwiper,
+  .reviewsSwiper {
+    max-width: 960px;
+  }
+  .intro__rightside {
+    width: 40rem;
+  }
+
+  .introSwiper .swiper-slide img {
+    width: 40rem;
+  }
+  .introSwiper .swiper-button-next {
+    width: 3rem;
+    height: 3rem;
+  }
+  .introSwiper .swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    right: 3.75rem;
+  }
+  .introSwiper .swiper-button-next:hover {
+    background-position: 17px center;
+  }
+  .introSwiper .swiper-button-prev:hover {
+    background-position: 6px center;
+  }
+  .logo img {
+    width: 5.375rem;
+  }
+  .header-nav ul .header-nav__li {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  }
+  .section-opening-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-section .titles-container {
+    width: 100%;
+  }
+  .section-opening-wrapper .opening-wrapper__text {
+    width: 100%;
+    margin-left: unset;
+    margin-top: 1.5rem;
+  }
+  .section-opening-wrapper__titles-links-container {
+    width: 100%;
+  }
+  .projects-section .opening-wrapper__link {
+    margin-top: 0;
+  }
+  .service-center__text {
+    padding-right: 0.5rem;
+  }
+  .projectsSwiper .swiper-slide .projectsSlider__category-label,
+  .newsSwiper .swiper-slide .newsSlider__category-label {
+    font-size: 0.5625rem;
+    line-height: 0.75rem;
+  }
+  .projectsSwiper .swiper-slide .projectsSlider__category-label,
+  .newsSwiper .swiper-slide .newsSlider__category-label {
+    top: 148px;
+  }
+  .additional-service {
+    width: calc(100% / 2 - 32px);
+  }
+  .additional-services-section .titles-container,
+  .project-options-section .titles-container,
+  .partners-section .titles-container {
+    width: 100%;
+  }
+  .projects-option__info-wrapper {
+    margin-left: 32px;
+  }
+  .projects-section .swiper-container {
+    height: 100%;
+  }
+  .our-opportunities-section,
+  .additional-services-section,
+  .project-options-section,
+  .partners-section {
+    padding: 40px 0;
+  }
+  .partners-section .swiper-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .titles-container .section-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 1.25rem 0 1rem;
+  }
+  .service-center-intro__info-container {
+    flex-direction: column;
+  }
+  .service-center-intro__img {
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+  }
+  .service-center-intro__title {
+    width: 488px;
+  }
+  .service-center-intro__text {
+    font-size: 16px;
+    width: 100%;
+  }
+  .workshops-tile__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .workshops-tile__item-text {
+    width: calc(100% - 332px - 24px);
+    margin-top: 0;
+    margin-left: 24px;
+    height: initial;
+  }
+  .wokrshops-tile__item-img {
+    width: 332px;
+    height: 187px;
+  }
+  .center-capability__info-title, 
+  .location__info-title, 
+  .center-complecting__info-title {
+    width: 100%;
+  }
+  .service-center-intro-section {
+    padding-bottom: 59px;
+  }
+  .workhops-tile {
+    margin-top: 0;
+  }
+  .center-capavility__into-text,
+  .location__into-text,
+  .center-complecting__into-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .location-section,
+  .center-complecting-section,
+  .center-capability-section,
+  .workshops-section,
+  .how-we-work-section {
+    padding: 64px 0;
+  }
+  .center-complecting__info-container,
+  .center-capability__info-container {
+    margin-left: 0;
+  }
+  .how-we-work__info-container {
+    width: 100%;
+    height: initial;
+  }
+  .how-we-work-section video {
+    margin: 0 auto;
+  }
+  .completed-projects-tile {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+    display: grid;
+    gap: 32px 56px;
+    grid-template-columns: 328px 328px;
+  }
+  .completed-projects-tile__item .services-tile__item-img {
+    width: 328px;
+    height: 185px;
+  }
+  .completed-projects-tile__item {
+    width: 328px;
+    margin-top: 0;
+  }
+  .completed-projects-tile__item .animation-item__overlay-wrapper, 
+  .completed-projects-tile__item .tile-animation__overlay {
+    width: 100%;
+    height: 185px;
+  }
+  .completed-projects-tile__category-label {
+    font-size: 9px;
+    line-height: 12px;
+    top: 157px;
+  }
+  .titles-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .map-wrapper {
+    display: none;
+  }
+  .addresses-wrapper {
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+  .addresses-wrapper__city-item {
+    margin-top: 24px;
+  }
+  .addresses-wrapper__city-item:first-of-type {
+    margin-top: 16px;
+  }
+  .addresses-wrapper__subtitle {
+    margin-top: 32px;
+    font-family: Oswald;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .addresses-wrapper__city-title {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #FD6E39;
+  }
+  .address-wrapper__city-info {
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #0E1114;
+  }
+  .addresses-wrapper {
+    max-width: calc(100vw - 80px);
+  }
+  .titles-container {
+    margin: 0 auto;
+    max-width: calc(100vw - 80px);
+  }
+  .what-tasks-section .titles-container {
+    max-width: 100%;
+  }
+  .map-section .wrapper .section-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .video__text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .career-intro__title {
+    width: 100%;
+  }
+  .career-intro-section p {
+    max-width: 100%;
+  }
+  .career-intro-section p:first-of-type {
+    margin-top: 24px;
+  }
+  .what-tasks-section .tasks-tile {
+    gap: 32px;
+    grid-template-columns: repeat(2, 328px);
+  }
+  .what-tasks-section .tasks-item {
+    width: 328px;
+    height: auto;
+    min-height: 96px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper {
+    max-width: calc(100vw - 80px);
+  }
+  .intro__rightside{
+    width: calc(100vw - 360px);
+  }
+  .intro__rightside {
+    height: 20.5625rem;
+  }
+  .intro__title {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    width: 20rem;
+    padding: 3rem 2rem 8rem 0;
+  }
+  .introSwiper .swiper-slide img {
+    width: calc(100vw - 360px);
+    position: absolute;
+    left: 0;
+  }
+  .introSwiper .swiper-button-next {
+    right: 2.5rem;
+  }
+  .introSwiper .swiper-button-prev {
+    right: 6.25rem;
+  }
+  .section-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0.5rem 0 2rem;
+  }
+  .services-tile__item {
+    width: 20.5rem;
+    margin-right: 0;
+  }
+  .services-tile__item .services-tile__item-img {
+    width: 20.5rem;
+    height: 11.5rem;
+  }
+  .services-tile__item .animation-item__overlay-wrapper {
+    width: 20.5rem;
+    height: 11.5rem;
+  }
+  .equipment-section {
+    background-size: auto, 47.4375rem;
+  }
+  .equipment-tile__item,
+  .equipment-tile__last-item {
+    width: 21.5rem;
+    height: 21.5rem;
+  }
+  .projects-section {
+    position: relative;
+  }
+  .projects-section .swiper-container {
+    width: calc(100vw - 80px);
+    position: relative;
+    margin: 0 auto;
+    /* height: 15.6875rem;
+    margin-top: 2rem; */
+    overflow: hidden;
+  }
+  .projectsSwiper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* height: 15.6875rem; */
+    max-width: 996px;
+  }
+  .projectsSwiper .projectsSwiper-img {
+    width: 19.5rem;
+    height: 11rem;
+  }
+  .projects-section .wrapper .arrow-btn-wrapper,
+  .news-section .wrapper .arrow-btn-wrapper,
+  .reviews-section .wrapper .arrow-btn-wrapper {
+    display: none;
+  }
+  .news-section .swiper-container {
+    width: calc(100vw - 44px);
+    position: relative;
+    margin-left: 44px;
+    height: 17.5rem;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+  .service-center__content-wrapper {
+    flex-direction: column-reverse;
+    margin-top: 9rem;
+  }
+  .service-center__text-wrapper {
+    padding-bottom: 1.625rem;
+  }
+  .service-center-rightside {
+    margin-left: unset;
+  }
+  .service-center-leftside {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+  .service-center__btn-container {
+    position: static;
+  }
+  .service-center-rightside__img {
+    height: 24.1875rem;
+  }
+  .reviews-section .swiper-container {
+    width: calc(100vw - 44px);
+    position: relative;
+    margin-left: 44px;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+  .form fieldset {
+    padding: 24px;
+  }
+  .form-section .titles-container {
+    width: unset;
+  }
+  .form-section .section-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0 16px;
+  }
+  .form-section .contacts-wrapper {
+    margin-top: 46px;
+  }
+  .footer-section {
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  .header .checkbox {
+    display: block;
+  }
+  .header__search-btn {
+    margin-right: 62px;
+  }
+  .checkbox {
+    position: absolute;
+    display: block;
+    height: 19px;
+    width: 24px;
+    top: 25px;
+    right: 16px;
+    z-index: 102;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .hamburger-lines {
+    display: block;
+    height: 19px;
+    width: 24px;
+    position: absolute;
+    top: 25px;
+    right: 16px;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hamburger-lines .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .header input[type=checkbox]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  .header input[type=checkbox]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  .header input[type=checkbox]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  .header input[type=checkbox]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  .header input[type=checkbox]:checked ~ .logo {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    z-index: -5;
+    opacity: 0;
+    transition: 0.16s all ease;
+  }
+  .mobile-menu.opened {
+    opacity: 1;
+    z-index: 100;
+    height: 100vh;
+  }
+  .mobile-menu__top-section {
+    height: 64px;
+    width: 100%;
+    background: #F7F8FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #2D3540;
+  }
+  .header-nav {
+    z-index: 21;
+    position: fixed;
+    top: 100px;
+    left: 40px;
+    font-size: 14px;
+    opacity: 0;
+    z-index: -5;
+    transition: all 0.16s ease;
+	display:none;
+  }
+  .header-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100vw - 80px);
+  }
+  .header-nav.opened {
+    opacity: 1;
+    z-index: 101;
+	display:block;
+  }
+  .header-hover-submenu {
+    padding: 0;
+    left: 0;
+  }
+  .header-hover-submenu ul li {
+    padding: 8px 8px 8px 0;
+    margin-top: 8px;
+  }
+  .header-hover-submenu ul li:hover {
+    padding: 8px 8px 8px 0;
+    margin-top: 8px;
+    filter: none;
+    border-right: none;
+  }
+  .header-hover-submenu ul li:hover::before {
+    display: none;
+  }
+  .header-nav ul .header-nav__li {
+    width: 100%;
+    margin-top: 8px;
+    color: #2D3540;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .header-nav ul .header-nav__li:first-child {
+    background: url("../images/slider-arrow-next.svg") no-repeat right center;
+  }
+  .header-nav ul .header-nav__li:nth-child(2) {
+    background: url("../images/slider-arrow-next.svg") no-repeat right center;
+  }
+  .header-nav ul .header-nav__li + .header-nav__li {
+    margin-left: 0;
+  }
+  .footer__content-slice {
+    width: 328px;
+    order: 3;
+    margin-top: 24px;
+  }
+  .footer__content-slice:first-child {
+    order: 1;
+    flex-basis: 50%;
+    margin-top: 0;
+  }
+  .footer__content-slice:last-child {
+    order: 2;
+    flex-basis: 50%;
+    margin-top: 0;
+  }
+  .problems-and-tasks-section .titles-container {
+    width: 100%;
+  }
+  .problems-and-tasks-section .section-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .problems-and-tasks-section .tasks-tile {
+    justify-content: center;
+  }
+  .problems-and-tasks-section .tasks-item {
+    width: 100%;
+    height: initial;
+  }
+  .problems-and-tasks-section .tasks-item__text {
+    padding-bottom: 24px;
+  }
+  .problems-and-tasks-section {
+    padding-top: 40px;
+  }
+  .our-oppotrunities__main-info {
+    flex-direction: column;
+  }
+  .our-oppotrunities__rightside {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .our-oppotrunities__rightside-img {
+    width: 100%;
+  }
+  .partners-section .swiper-container {
+    max-width: calc(100vw - 80px);
+    margin: 0 auto;
+  }
+  .about-company-intro-title {
+    width: 100%;
+  }
+  .year {
+    padding-left: 0;
+  }
+  .year__text-container {
+    margin-left: 32px;
+  }
+  .year__text {
+    font-size: 16px;
+  }
+  .advantages-tile {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .advantages-item {
+    width: 100%;
+    height: initial;
+    margin: 0;
+    margin-top: 32px;
+    padding-bottom: 24px;
+  }
+  .health-safety-and-environment-section {
+    padding-bottom: 64px;
+  }
+  .safety-tile {
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 328px);
+    gap: 32px;
+  }
+  .safety-item {
+    margin: 0;
+    width: 328px;
+  }
+  .health-safety-and-environment-section {
+    padding-top: 64px;
+  }
+  .video__text {
+    width: 328px;
+  }
+}
+/* @media (max-width: 800px) {
+  
+} */
+@media (max-width: 768px) {
+  .intro-section,
+  .services-section,
+  .equipment-section,
+  .projects-section,
+  .service-center-section,
+  .news-section,
+  .reviews-section,
+  .form-section {
+    padding: 40px 0;
+  }
+  .wrapper {
+    max-width: calc(100vw - 48px);
+  }
+  .intro__leftside {
+    display: none;
+  }
+  .intro__rightside {
+    display: none;
+  }
+  .intro-mobile {
+    display: block;
+  }
+  .intro-mobile__img {
+    width: 100%;
+  }
+  .intro-mobile__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-top: 16px;
+  }
+  .intro-mobile__link {
+    display: inline-block;
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    padding: 16px 42px 16px 0;
+    background-image: url("../images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 87% center;
+  }
+  .service-center-rightside__img {
+    height: 184px;
+  }
+  .service-center__content-wrapper {
+    margin-top: 280px;
+    height: 11.625rem;
+  }
+  .projects-section .swiper-container {
+    width: calc(100vw - 24px);
+  }
+  .news-section .swiper-container {
+    margin-left: 24px;
+    width: calc(100vw - 24px);
+    margin-top: 24px;
+    height: unset;
+  }
+  .form-section .mobile-contacts__accodrion-trigger {
+    display: block;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+    transform: rotate(0deg);
+  }
+  .form-section .mobile-contacts__accodrion-trigger.active .plus-icon-container {
+    background: #FD6E39;
+  }
+  .form-section .mobile-contacts__accodrion-trigger.active img {
+    transform: rotate(90deg);
+  }
+  .form-section .contacts-wrapper {
+    margin-top: 24px;
+    max-height: 0;
+    transition: all 0.16s ease;
+    overflow: hidden;
+  }
+  .mobile-contacts__trigger-text {
+    color: #fff;
+    font-family: Oswald;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .plus-icon-container {
+    height: 48px;
+    width: 48px;
+    background: #0E1114;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .plus-icon-container img {
+    transition: all 0.16s ease;
+  }
+  .plus-icon-container:hover {
+    background: #FD6E39;
+  }
+  .plus-icon-container:hover img {
+    transform: rotate(90deg);
+  }
+  .newsSwiper {
+    margin-top: 0;
+  }
+  .form-section .wrapper {
+    flex-direction: column;
+  }
+  .form-section__rightside {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .form-section__rightside {
+    margin-top: 0;
+  }
+  .footer__content-slice {
+    display: none;
+  }
+  .footer__content-slice:first-child {
+    flex-basis: 100%;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+  }
+  .footer__content-slice:last-child {
+    flex-basis: 100%;
+    flex-direction: column;
+    margin-top: 16px;
+    display: flex;
+  }
+  .footer__content-slice:last-child .footer__link {
+    width: 165px;
+  }
+  .footer-section .contact-btn {
+    font-size: 12px;
+    line-height: 16px;
+    width: 155px;
+  }
+  .footer-section .footer-logo {
+    width: 116px;
+  }
+  .mobile-footer__content-container {
+    display: block;
+    width: 100%;
+  }
+  .mobile-footer__content-container.active .plus-icon-container {
+    background: #FD6E39;
+  }
+  .mobile-footer__content-container.active img {
+    transform: rotate(90deg);
+  }
+  .mobile-footer__content-container:first-child {
+    order: 3;
+  }
+  .mobile-footer__accordion-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-footer__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    transition: all 0.16s ease;
+    overflow: hidden;
+  }
+  .mobile-footer__content-wrapper:first-child {
+    order: 4;
+  }
+  .partners-section .titles-container {
+    width: 100%;
+  }
+  .our-oppotrunities__rightside-img {
+    object-fit: contain;
+    height: auto;
+  }
+  .year {
+    margin-top: 24px;
+    flex-direction: column;
+  }
+  .safety-tile {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .safety-item {
+    width: 100%;
+  }
+  .safety-item__text {
+    margin-top: 16px;
+  }
+  .about-company-intro-img {
+    height: 184px;
+    margin-top: 1.5rem;
+  }
+  .year__title {
+    height: 80px;
+    padding: 0;
+    border: none;
+  }
+  .year__text {
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+  .year__text-container {
+    padding-top: 1rem;
+    margin-left: 0;
+  }
+  .services-tile__item:last-of-type {
+    margin-right: initial;
+  }
+  .service-center-intro__title {
+    max-width: 327px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .workshops-tile__item {
+    flex-direction: column;
+    margin-top: 24px;
+  }
+  .workshops-tile__item-text {
+    margin-top: 16px;
+    margin-left: 0;
+    padding-bottom: 16px;
+    width: 100%;
+  }
+  .wokrshops-tile__item-img {
+    width: 100%;
+    height: auto;
+  }
+  .location__img {
+    width: 100%;
+    height: auto;
+  }
+  .center-capability__img,
+  .center-complecting__img {
+    width: 100%;
+  }
+  .how-we-work-section video {
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+  }
+  .service-center-intro__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .how-we-work__into-text {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .location-section, 
+  .center-complecting-section, 
+  .center-capability-section, 
+  .workshops-section, 
+  .how-we-work-section {
+    padding: 48px 0;
+  }
+  .block_navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .link_more_goods {
+    text-align: center;
+    width: 328px;
+  }
+  .pagination-section {
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+  .pagination-container {
+    margin-top: 24px;
+  }
+  .addresses-wrapper {
+    margin-top: 24px;
+  }
+  .addresses-wrapper__city-info {
+    font-size: 13px;
+  }
+  .map-section {
+    padding: 48px 0;
+  }
+  .video__text {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .video-wrapper + .video-wrapper {
+    margin-top: 32px;
+  }
+  .videos-section {
+    padding-bottom: 48px;
+  }
+  .document__title {
+    width: 263px;
+  }
+  .documents-intro-section {
+    padding-top: 48px;
+  }
+  .documents-section {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  .what-tasks-section .tasks-tile {
+    gap: 16px 0;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .what-tasks-section .tasks-item {
+    width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  .equipment-products-section .wrapper {
+    justify-content: space-evenly;
+  }
+  .equipment-products__tile {
+    max-width: 916px;
+  }
+  .projects-option img,
+  .projects-option .projects-option__info-wrapper {
+    width: calc(100% / 2 - 32px);
+  }
+  .projects-option img {
+    height: 184px;
+  }
+}
+@media (max-width: 1100px) {
+  .equipment-categories__links-container {
+    margin-left: calc((100% - 795px) / 2);
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    height: 64px;
+  }
+  .hamburger-lines {
+    top: 22px;
+  }
+  .header-nav ul .header-nav__li {
+    position: unset;
+  }
+  .header-hover-submenu {
+    top: 0;
+    border-top: unset;
+    box-shadow: unset;
+  }
+  .label-section h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .label-section__text {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1.2px;
+  }
+  .equipment-categories__links-container {
+    margin-left: calc((100% - 685px) / 2);
+    margin-top: 48px;
+  }
+  .equipment-categories__img {
+    width: 80px;
+  }
+  .equipment-categories__link {
+    padding: 0 8px;
+  }
+  .equipment-categories__title {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1.1px;
+    width: 121px;
+  }
+  .equipment-products__tile {
+    margin-left: -32px;
+    max-width: 720px;
+  }
+  .equipment-product {
+    width: 328px;
+    height: 328px;
+    margin-left: 32px;
+    margin-top: 32px;
+  }
+  .equipment-product .arrow-btn-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+  .equipment-product__title {
+    font-size: 16px;
+    line-height: 24px;top: 20px;
+  }
+  .equioment-product__more-text {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.48px;
+  }
+  .advantages-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .year__text-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+
+  .label-section {
+    padding: 24px;
+  }
+  .label-section h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .equipment-categories__links-container {
+    margin-top: 24px;
+    margin-left: calc((100% - 492px) / 2);
+  }
+  .equipment-categories__img {
+    width: 64px;
+  }
+  .equipment-categories__title {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1.1px;
+    width: 148px;
+    margin-top:0px;margin-bottom:16px;
+  }
+  .pagination-section .wrapper {
+    flex-direction: column;
+  }
+  .swiper-button-next, 
+  .swiper-rtl .swiper-button-prev {
+    display: none;
+  }
+}
+@media (max-width: 740px) {
+  .equipment-products__tile {
+    flex-direction: column;
+  }
+  .services-tile__wrapper {
+    justify-content: center;
+  }
+  .completed-projects-tile {
+    grid-template-columns: 328px;
+  }
+  .video-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .media-intro__title {
+    max-width: 328px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 auto;
+  }
+  .media-intro-section {
+    padding-top: 48px;
+  }
+  .videos-section {
+    padding-top: 32px;
+  }
+  .vacancy__info-slice {
+    flex-direction: column;
+  }
+  .vacancy__info-value li:first-of-type {
+    margin-top: 12px;
+  }
+  .vacancy__btn-link {
+    margin-bottom: 16px;
+  }
+  .vacancies-section {
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 540px) {
+  .equipment-categories__links-container {
+    margin-left: calc((100% - 328px) / 2);
+  }
+  .problems-and-tasks-section .section-title {
+    font-size: 16px;
+  }
+  .problems-and-tasks-section {
+    padding-top: 48px;
+  }
+  .additional-services {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .additional-service {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .additional-service__text {
+    margin-top: 16px;
+  }
+  .titles-container .section-title {
+    margin-top: .5rem;
+  }
+  .projects-option {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+  .projects-option img, 
+  .projects-option .projects-option__info-wrapper {
+    width: 100%;
+  }
+  .projects-option .projects-option__info-wrapper {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .form fieldset {
+    padding: 0 24px 24px 24px;
+  }
+  .section-opening-wrapper .section-title {
+    padding-right: 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 440px) {
+  .form-section__rightside fieldset {
+    width: 100%;
+  }
+  .form fieldset select,
+  .form-input-container,
+  .form fieldset input[type='submit'] {
+    width: 279px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+.arrow-btn-wrapper { display: flex; justify-content: center; align-items: center; }
+.arrow-btn-wrapper .arrow-btn-img { position: relative; transform: none!important; top: 0; left: 0; -webkit-transition: all 200ms ease; transition: all 200ms ease; }
+.swiper-button-prev .arrow-btn-img { transform: rotate(180deg)!important; }
+.swiper-button-prev .arrow-btn-wrapper:hover .arrow-btn-img { left: -5px; }
+.swiper-button-next .arrow-btn-wrapper:hover .arrow-btn-img { left: 5px; }
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled { pointer-events: unset; }
+.swiper-button-disabled .arrow-btn-wrapper:hover { background: #0E1114; }
+.swiper-button-disabled .arrow-btn-wrapper:hover .arrow-btn-img { left: 0; }
+.swiper-button-disabled .arrow-btn-wrapper:hover::before { width: 0; }
+
+.p-breadcrumb{
+  margin: 24px 0 24px 24px;
+  font-size: 12px;
+  max-width: 100%;
+
+}
+.p-breadcrumb:last-of-type{
+  color:#C3CCE0;
+}
+/* @media (max-width: 413px) {
+  .form fieldset {
+    padding: 8px;
+  }
+} */
+@media (max-width: 768px) {
+  .table-wrapper{
+    /*overflow-x: scroll;*/
+  }
+  .arrow-btn-wrapper {
+    display: none;
+  }
+}
+/*.item-filter:hover{
+  color: #FFFFFF;
+}*/
+.add-in-filter {
+ /* background-color: #FD6E39;*/
+  color: #FD6E39;
+  border: 1px solid #FD6E39;
+}
+.current-filter{
+  color: #FD6E39;
+  border: 1px solid #FD6E39;
+}
+.hr-line{
+  padding-bottom: 24px;
+  border-bottom: 1px solid #C3CCE0;
+  max-height: fit-content;
+  margin-bottom: 20px;
+}
+.filter-button{
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: #2D3540;
+  border-radius: 56px;
+  border-radius: 56px;
+  background: #fff;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-left: 8px;
+  transition: all 0.16s ease;
+  cursor: pointer;
+  background: #FD6E39;
+  color: #fff;
+}
+.filter-button:hover{
+ /* box-shadow: 1px 1px 1px 1px rgba(255, 0, 255, .2);*/
+}
+.js_wrapper-link{
+  display: none;
+}
+/* выполненные проекты */
+.project {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: inherit;
+}
+.project__item-container {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.project__item-container:first-of-type {
+  margin-top: 0;
+}
+@media screen and (max-width: 1400px) {
+  .project__item-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .project__item-container {
+    margin-top: 32px;
+  }
+}
+.project__item-point {
+  width: 26rem;
+  border-right: 1px solid #C3CCE0;
+  margin-right: 15px;
+}
+@media screen and (max-width: 1400px) {
+  .project__item-point {
+    width: 100%;
+  }
+}
+.project__decorate-item {
+  width: 12px;
+  height: 4px;
+  background-color: #FD6E39;
+}
+.project__subtitle-container {
+  border-bottom: 1px solid #C3CCE0;
+}
+.project__subtitle {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.project__subtitle_single {
+  padding-bottom: 16px;
+}
+.project__description {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.project__button {
+  width: 100%;
+  cursor: pointer;
+  padding: 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #0E1114;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+.project__arrow-img {
+  margin-left: 8px;
+}
+@media screen and (max-width: 1440px) {
+  .project__content_image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .project__content_image {
+    -webkit-box-pack: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+    margin-top: 24px;
+  }
+}
+.project__photo {
+  width: 872px;
+  height: 490px;
+}
+@media screen and (max-width: 1100px) {
+  .project__photo {
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .project__photo {
+    margin-top: 16px;
+  }
+}
+.project__point-description {
+  width: 872px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.project__point-description_problem {
+  font-size: 20px;
+  line-height: 28px;
+}
+@media screen and (max-width: 480px) {
+  .project__point-description_problem {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__point-description {
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .project {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .project {
+    margin-top: 48px;
+  }
+  .years-section {
+    padding-left: 30px;
+
+  }
+}
+
+.service__link {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.service__link p {
+  margin-left: 8px;
+}
+
+.label-section .service__title {
+  margin: 0;
+  margin-top: 64px;
+}
+@media screen and (max-width: 768px) {
+  .label-section .service__title {
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .label-section .service__title {
+    margin-top: 56px;
+  }
+  .filters-container .filters-inner{
+    /*max-height: 500px;*/
+  }
+}
+/* !выполненные проекты */
+.career-intro-section p {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 14px;
+    position: relative;
+    width: 880px;
+
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-collapse: collapse; 
+}
+.table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+.table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+.career-more-button {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: Oswald, 'sans-serif';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  display: flex;
+  color: #0E1114;
+  padding: 24px 0;
+  user-select: none;
+}
+.career-more-button::after {
+  content: url(../images/arrow-select.svg);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: -24px;
+  top: 24px;
+}
+.career-more-button_opened::after {
+  content: url(../images/arrow-select.svg);
+  transform: rotate(180deg)
+}
+.career-intro__paragraph {
+  margin: 0;
+  margin-top: 14px;
+  max-width: 880px;
+  display: none;
+  font-family: Montserrat, 'sans-serif';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #0E1114;
+}
+.career-intro__paragraph:first-of-type {
+  margin-top: 24px;
+}
+.career-intro__paragraph_opened {
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .career-intro__paragraph {
+    max-width: 100%;
+  }
+}
+.about-company-page-career{
+  background: #ffffff;
+  color: black;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/*
+ * Custom Select jQuery Plugin Base
+ */
+.custom-select {
+  position: relative;
+}
+
+.custom-select__option {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-select__option-wrap {
+  position: relative;
+}
+
+.custom-select__input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-radius: 0;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-select__dropdown {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+
+.custom-select--dropup .custom-select__dropdown {
+  top: auto;
+  bottom: 100%;
+}
+
+/*
+ * Custom Select jQuery Plugin Theme
+ */
+.custom-select__option {
+  width: 100%;
+  position: relative;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  color: #212121;
+  line-height: 1.5;
+}
+
+.custom-select__option:focus {
+  outline: none;
+}
+
+/* .custom-select__option:hover, .custom-select__option:focus {
+  background-color: #f9f9f9;
+} */
+
+.custom-select__option--value {
+  padding-right: 1.875rem;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25rem;
+}
+
+.custom-select__option--value::after {
+  content: url('../images/arrow-select.svg');
+  position: absolute;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.custom-select__option::before {
+  content: 'Город';
+  box-sizing: border-box;
+}
+
+.custom-select--active .custom-select__option--value::after {
+  transform: rotate(-180deg);
+}
+
+.custom-select--active .custom-select__option--value {
+  border-bottom-color: transparent;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* .custom-select--active .custom-select__option--value:hover, .custom-select--active .custom-select__option--value:focus {
+  background-color: #fff;
+} */
+
+.custom-select--dropup.custom-select--active .custom-select__option--value {
+  border-top-color: transparent;
+  border-bottom-color: #e6e6e6;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* .custom-select__option--selected {
+  background-color: #fcfcfc;
+} */
+
+.custom-select__option[disabled] {
+  color: #a1a1a1;
+  cursor: default;
+}
+
+.custom-select__option[disabled]:hover, .custom-select__option[disabled]:focus {
+  background-color: transparent;
+}
+
+.custom-select__option-wrap {
+  overflow-y: auto;
+  max-height: 11.25rem;
+}
+
+.custom-select__option-wrap::-webkit-scrollbar {
+  width: 16px;
+}
+
+.custom-select__option-wrap::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;
+  background-clip: padding-box;
+  border-width: 0 4px;
+  border-style: solid;
+  border-color: #E6EAF6;
+}
+
+.custom-select__input {
+  position: relative;
+  z-index: 1;
+  height: 2.25rem;
+  margin-top: -1px;
+  padding: 0 0.75rem;
+  border-color: #E6EAF6;
+  transform: translateY(1px);
+  font-size: 1rem;
+  color: #212121;
+}
+
+.custom-select__input:focus {
+  outline: none;
+}
+
+.custom-select--dropup .custom-select__input {
+  border-top-width: 0;
+  margin-top: 0;
+  transform: translateY(0);
+}
+
+.custom-select__dropdown {
+  overflow: hidden;
+  z-index: 1;
+  top: calc(100% - 1px);
+  background-color: #fff;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #E6EAF6;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.custom-select--dropup .custom-select__dropdown {
+  bottom: calc(100% - 1px);
+  border-width: 1px 1px 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/*
+* zero radius
+*/
+.custom-select__option--value,
+.custom-select__dropdown,
+.custom-select--dropup .custom-select__dropdown,
+.custom-select--active .custom-select__option--value,
+.custom-select--dropup.custom-select--active .custom-select__option--value {
+  width: 100%;
+  border-radius: 0;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #0E1114;
+}
+
+.custom-select__option {
+  height: 57px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #0E1114;
+}
+
+.custom-select__option {
+  border-color: #E6EAF6;
+  padding-top: 20px;
+}
+
+.custom-select__option:before {
+  font-family: Montserrat, 'sans-serif';
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.33px;
+}
+
+.custom-select__dropdown .custom-select__option:nth-child(1)::before {
+  content: 'Москва';
+  position: absolute;
+  bottom: 32px;
+  left: 12px;
+}
+.custom-select__dropdown .custom-select__option:nth-child(2)::before {
+  content: 'Санкт-Петербург';
+  position: absolute;
+  bottom: 32px;
+  left: 12px;
+}
+.custom-select__dropdown .custom-select__option:nth-child(3)::before {
+  content: 'Тюмень';
+  position: absolute;
+  bottom: 32px;
+  left: 12px;
+}
+.custom-select__dropdown .custom-select__option:nth-child(4)::before {
+  content: 'Атырау';
+  position: absolute;
+  bottom: 32px;
+  left: 12px;
+}
+
+.custom-select__option::before {
+  content: 'Филиал';
+  position: absolute;
+  bottom: 32px;
+  left: 12px;
+}
+
+@media (max-width: 768px){
+  .swiper-slide .projectsSlider-title{
+    max-width:312px;
+  }
+  .swiper-slide .animation-item__overlay-wrapper{
+    max-width:312px;
+  }
+  .swiper-slide .equipmentsSwiper .animation-item__overlay-wrapper{
+    max-width:416px;
+  }
+  .swiper-slide .equipmentsSwiper-title{
+    max-width:416px;
+  }
+  .equipmentsSwiper .swiper-slide{
+    padding-left: 60px;
+  }
+  .projectsSwiper .swiper-slide{
+    padding-left: 60px;
+  }
+  .projectsSwiper .projectsSlider__category-label{
+    margin-left: 60px;
+  }
+  .equipments-section .swiper-container{
+    overflow: hidden;
+  }
+  .titles-container {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+}
+@media (max-width: 516px){
+  .equipmentsSwiper .swiper-slide{
+    padding-left: 0;
+  }
+  .projectsSwiper .swiper-slide{
+    padding-left: 30px;
+  }
+  .projectsSwiper .projectsSlider__category-label{
+    margin-left: 30px;
+  }
+  .equipmentsSwiper .animation-item__overlay-wrapper img{
+    max-width: 312px;
+    max-height: 234px;
+    height:180px;
+  }
+  .equipmentsSwiper .swiper-slide .animation-item__overlay-wrapper {
+
+    padding-left: 30px;
+  }
+  .equipmentsSwiper .swiper-slide .equipmentsSwiper-title {
+    max-width: 312px;
+    padding: 0 0 0 30px;
+  }
+}
+@media (max-width: 1200px){
+  .equipments-section .swiper-container{
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1800px) {
+  .opening-wrapper__link-container {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 992px){
+  .equipments-section .swiper-container{
+    overflow: hidden;
+  }
+  .opening-wrapper__link-container {
+    margin: 0;
+  }
+}
+.media-intro-section h4.wrapper::before{
+  content: "";
+  width: 12px;
+  height: 4px;
+  background: #FD6E39;
+  position: absolute;
+  margin-top: -20px;
+  /*top: 640px;*/
+  /*left: 0;*/
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
+}
+.header {
+  height: auto;
+}
+.header__info-phone{
+  color: #FD6E39;
+}
+.header__info-phone:hover{
+  color: #000;
+}
+.header__info-phone, .header__info-mail {
+  display: block;
+  transition: all .2s;
+  line-height: 1;
+}
+.header__info-mail {
+  line-height: 1;
+}
+.header__info-mail:hover{
+  color: #FD6E39;
+}
+.equipment-products__tile {
+  display: grid;
+  justify-content: center;
+  margin-left: 0;
+  width: 100%;
+}
+.equipment-product{
+  display: block;
+  margin: 0;
+}
+.equipment-products__item {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.equipment-products__button {
+  margin-top: 16px;
+}
+.product-info-slice__button {
+  width: 100%;
+  margin-top: 16px;
+}
+.button {
+  display: inline-flex;
+  font-family: Oswald;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px 0;
+  transition: all 0.16s ease;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+}
+.button--black {
+  background: #0E1114;
+  color: #fff;
+}
+.button--black:hover {
+  background-color: #FD6E39;
+}
+.button--orange {
+  background: #FD6E39;
+  color: #fff;
+}
+.button--orange:hover {
+  background-color: #0E1114;
+}
+.popup-order .form fieldset{
+  padding: 0;
+}
+.popup-order .form-section__rightside {
+  margin: 0;
+}
+.popup-order .section-title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.home-title {
+  text-align: center;
+}
+.home-title h1 {
+  font-size: 2.2em;
+}
+.button-request {
+  display: none
+}
+@media (max-width: 767px){
+  body {
+    padding-top: 90px;
+  }
+  .footer{
+    overflow: hidden;
+    padding-bottom: 56px;
+  }
+  .header {
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 99;
+  }
+  .header__info {
+    width: 100%;
+    margin-top: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__info-phone, .header__info-mail {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .header__info-phone {
+    font-size: 16px;
+  }
+  .header__info-mail {
+    font-size: 16px;
+  }
+  .equipment-products__tile {
+    margin-top: 32px;
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fit, 326px);
+  }
+  .home-title {
+    padding-top: 40px;
+  }
+  .button-request {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    z-index: 99;
+  }
+  .button-request .button {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px){
+  .header__info {
+    display: flex;
+    margin-right: 60px;
+  }
+  .header__search-btn {
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  .header__info-phone {
+    font-size: 18px;
+  }
+  .header__info-phone, .header__info-mail {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .equipment-products__tile {
+    margin-top: 32px;
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fit, 326px);
+  }
+
+}
+@media (max-width: 400px) {
+  .header__info-mail, .header__info-phone {
+    font-size: 14px;
+  }
+}
+@media (min-width: 993px){
+  .header {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .header__info {
+    width: 250px;
+    position: absolute;
+    top: 100%;
+    margin-top: 16px;
+    right: 0.5rem;
+    text-align: right;
+  }
+  .header__info-phone, .header__info-mail {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .header__info-phone {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .header__info-mail {
+    font-size: 16px;
+  }
+  .equipment-products__tile {
+    margin-top: 48px;
+    grid-gap: 48px;
+    grid-template-columns: repeat(auto-fit, 410px);
+  }
+  .p-breadcrumb {
+    padding-right: calc(250px + 0.5rem);
+    padding-left: 0.5rem;
+    margin-left: 0;
+
+  }
+  .hamburger-lines {
+    display: none
+  }
+
+}
+@media (min-width: 768px) and (max-width: 1400px){
+  .home-title {
+    padding-top: 44px;
+  }
+}
+@media (min-width: 1401px){
+  .p-breadcrumb {
+    padding-right: calc(250px + 5rem);
+    padding-left: 5rem;
+  }
+  .header__info {
+    right: 5rem;
+  }
+  .home-title {
+    padding-top: 4rem;
+  }
+  .page-home .services-section {
+    padding-top: 4rem;
+  }
+}
+.equipment-subsections__wrapper {
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.equipment-subsections__link {
+  margin: 0;
+}
+
+.text-style .news-single-page ul, .text-style p{
+  max-width: 100%;
+}
+
+.text-style .news-single-page li {
+  margin-bottom: 12px;
+}
+
+.text-style ul, .text-style ol {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-left:20px;
+  padding: 0;
+}
+
+.text-style p,.text-style li,.text-style a,.text-style ol,.text-style ul,.text-style h2,.text-style h3{max-width:992px;margin:0 auto;}
+
+.requisites.text-style p, .requisites.text-style li{margin:0 auto 0 0;}
+.requisites.titles-container{border:none;}
+
+.text-style img{max-width:100%;}
+.text-style ul li{list-style:disc;}
+.text-style ul ul li{list-style:disc;}
+.text-style .news-single-page li{list-style:none;}
+.text-style .pagination-btn{list-style:none;padding-left: 0px;}
+
+.text-style ol{
+  counter-reset: list-counter;
+}
+.text-style ol&gt;li {
+  counter-increment: list-counter;
+  margin-bottom: 16px;
+}
+.text-style ol&gt;li::before {
+  content: counter(list-counter) ". ";
+  color: #FD6E39;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  top: 0;
+}
+
+.text-style h3 {
+  margin-top: 36px;
+  margin-bottom: 22px;
+}
+.text-style h3.news-section-page__subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-style h2 {
+  margin-top: 36px;
+  margin-bottom: 22px;
+}
+.projectsSlider__category-label a{
+  color: #fff
+}
+.logo {
+  max-width: 200px;
+  height: 40px;
+}
+.logo img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text-style p {
+  margin-bottom: 16px;
+  font-family: Montserrat, "sans-serif";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.text-style p.label-section__text{
+  margin: 0;
+}
+.text-style li {
+  position: relative;
+  font-family: Montserrat, "sans-serif";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 12px;
+  padding-left: 30px;
+}
+
+@media (min-width: 993px) and (max-width: 1400px) {
+	.footer_end, .footer_first{
+		width:100%!important;margin:14px 0;display:flex;align-items:center;justify-content:space-between;flex-direction:row;
+	}
+}
+
+.product-info-slice:first-child .titles-container {
+  margin-left: 0;
+  margin-right: 0;
+}
+.equipment-product__price {
+  color: #FD6E39;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-top: 16px;
+}
+table.price-table {
+  border: none;
+}
+table.price-table td:nth-child(1) {
+  opacity: 1;
+}
+table.price-table td:nth-child(n+1) {
+  text-transform: none;
+}
+table.price-table td {
+  border: none;
+  padding: 0 10px;
+}
+table.price-table td:last-child p {
+  text-align: right;
+  color: #FD6E39 ;
+}
+table.price-table td p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-style p span {
+  color: #EA5E2C;
+}
+
+.new_detail_picture {
+  position: relative;
+}
+
+.new_detail_picture img {
+  display: block;
+}
+
+.ds_detail_picture_description {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.ds_detail_picture__header {
+  padding-left: 96px;
+  color: #fff;
+}
+
+.ds_detail_picture__title {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.ds_detail_picture__sub-title {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.ds_detail_picture_card {
+  max-width: 766px;
+  padding: 42px 53px 41px 95px;
+  color: #fff;
+  background: #36467A;
+}
+
+@media (max-width: 1100px) {
+  .ds_detail_picture_description {
+    position: relative;
+  }
+  .ds_detail_picture__header {
+    position: absolute;
+    top: -88px;
+    padding-right: 30px;
+  }
+  .ds_detail_picture_card {
+    max-width: 100%;
+  }
+}
+@media (max-width: 781px) {
+  .ds_detail_picture__header {
+    top: -132px;
+  }
+}
+@media (max-width: 550px) {
+  .ds_detail_picture__header, .ds_detail_picture_card {
+    padding-left: 53px;
+  }
+}
+@media (max-width: 470px) {
+  .ds_detail_picture__title {
+    font-size: 26px;
+  }
+  .ds_detail_picture__sub-title {
+    font-size: 18px;
+  }
+  .ds_detail_picture_card {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 380px) {
+  .ds_detail_picture__header {
+    padding-left: 20px;
+  }
+  .ds_detail_picture_card {
+    padding: 30px 20px;
+  }
+}
+.ds-solo-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.ds-block .ds-solo-title {
+  margin: 0;
+}
+
+.ds-block {
+  margin: 70px auto 0 auto;
+  max-width: 1140px;
+}
+.ds-block__max-1000 {
+  max-width: 1005px;
+}
+.ds-block__gap {
+  margin-top: 70px;
+}
+
+.ds-block-text {
+  color: #000;
+}
+.ds-block-text h2, .ds-block-text p {
+  margin: 0;
+}
+.ds-block-text p {
+  padding-top: 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+}
+.ds-block-text p:first-child {
+  padding-top: 0px;
+}
+.ds-block-text__small {
+  max-width: 553px;
+}
+.ds-block-text__medium {
+  max-width: 750px;
+}
+
+@media (max-width: 1400px) {
+  .ds-block-text__small {
+    max-width: 500px;
+  }
+}
+@media (max-width: 1100px) {
+  .ds-block-text__medium {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .ds-block-text__small {
+    max-width: 400px;
+  }
+}
+@media (max-width: 880px) {
+  .ds-block-text__small {
+    max-width: 100%;
+  }
+}
+.ds-flex-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 880px) {
+  .ds-flex-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.ds-card {
+  padding: 18px 17px 18px 30px;
+  border: 2px solid #e6eaf6;
+  border-radius: 20px;
+  max-width: 270px;
+}
+.ds-card p {
+  margin: 0;
+}
+.ds-card p:first-child {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #EA5E2C;
+}
+.ds-card p:first-child span {
+  font-size: 16px;
+}
+.ds-card p:last-child {
+  padding-top: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  color: #777;
+}
+.ds-card__big {
+  max-width: 555px;
+  padding: 61px 29px 55px 29px;
+}
+.ds-card__big p:first-child {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16.25px;
+  text-align: center;
+  color: #EA5E2C;
+}
+
+@media (max-width: 1400px) {
+  .ds-card__big {
+    max-width: 500px;
+  }
+}
+@media (max-width: 1100px) {
+  .ds-card__big {
+    margin-left: 20px;
+    max-width: 400px;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 880px) {
+  .ds-card {
+    margin-top: 20px;
+  }
+  .ds-card__big {
+    margin-left: 0px;
+    max-width: 100%;
+  }
+}
+.ds-mosaic {
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: num;
+  list-style: none;
+}
+.ds-block .ds-mosaic {
+  max-width: 100%;
+  margin: -15px -19px;
+}
+.ds-block .ds-mosaic.margin {
+  margin-top: 0;
+}
+.ds-mosaic li {
+  margin: 19px 15px;
+  width: calc(33.3% - 30px);
+  padding-top: 43px;
+  padding-left: 0;
+  position: relative;
+  counter-increment: num;
+  font-size: 16px;
+}
+.ds-mosaic li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: counter(num);
+  font-weight: 700;
+  font-size: 36px;
+  color: #CFCDCD;
+}
+.ds-mosaic li:nth-child(-n+9):before {
+  content: "0" counter(num);
+}
+.ds-mosaic li.img {
+  padding: 0;
+}
+.ds-mosaic li.img:before {
+  display: none;
+}
+.ds-mosaic li.img img {
+  max-height: 205px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.ds-mosaic li p {
+  margin: 0;
+  font-size: 16px;
+  line-height: normal;
+}
+.ds-mosaic li p:first-child {
+  font-weight: 700;
+  color: #EA5E2C;
+}
+.ds-mosaic li p:last-child {
+  padding-top: 10px;
+  font-weight: 400;
+  color: #777;
+}
+.ds-mosaic.big {
+  margin: -20px -23px;
+}
+.ds-mosaic.big li {
+  margin: 20px 23px;
+  width: calc(50% - 46px);
+}
+
+@media (max-width: 880px) {
+  .ds-mosaic li {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 700px) {
+  .ds-mosaic li {
+    width: calc(100% - 30px);
+  }
+  .ds-mosaic.big li {
+    width: calc(100% - 46px);
+  }
+}
+.wrapper .ds-list-a {
+  margin: 28px 0 0 0;
+}
+.wrapper .ds-list-a li {
+  padding: 0;
+  margin: 20px 0 0 56px;
+  font-size: 16px;
+  position: relative;
+}
+.wrapper .ds-list-a li:first-child {
+  margin-top: 0;
+}
+.wrapper .ds-list-a li::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -48px;
+  width: 32px;
+  height: 32px;
+  background-image: url(assets/images/A.svg);
+  background-repeat: no-repeat;
+}
+.wrapper .ds-list-a li p {
+  line-height: normal;
+  margin: 0;
+}
+.wrapper .ds-list-a li p:first-child {
+  font-weight: 700;
+  color: #EA5E2C;
+}
+.wrapper .ds-list-a li p:last-child {
+  padding-top: 10px;
+  font-weight: 400;
+  color: #777;
+}
+
+@media (max-width: 540px) {
+  .wrapper .ds-list-a li {
+    margin-left: 30px;
+  }
+  .wrapper .ds-list-a li::before {
+    left: -30px;
+    background-size: 20px;
+  }
+}
+.ds-block-img {
+  position: relative;
+  padding-right: 468px;
+}
+.ds-block-img img {
+  position: absolute;
+  right: -94px;
+  width: 540px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ds-block-img__reverse {
+  flex-direction: row-reverse;
+  padding-right: 0;
+  padding-left: 468px;
+}
+.ds-block-img__reverse img {
+  left: -94px;
+}
+
+@media (max-width: 1200px) {
+  .ds-block-img img {
+    right: 0px;
+    width: 425px;
+  }
+  .ds-block-img__reverse {
+    flex-direction: row;
+  }
+  .ds-block-img__reverse img {
+    left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .ds-block-img {
+    padding-right: 0;
+    padding-left: 0;
+    flex-wrap: wrap;
+  }
+  .ds-block-img .ds-block-text {
+    padding: 0;
+  }
+  .ds-block-img img {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+.ds-block-blue {
+  position: relative;
+}
+.ds-block-blue img {
+  position: absolute;
+  top: 0;
+  left: -94px;
+  max-width: calc(100% + 188px);
+  width: calc(100% + 188px);
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ds-block-blue .ds-block-text {
+  padding: 50px 98px 80px 82px;
+  color: #fff;
+  position: relative;
+}
+.ds-block-blue .ds-block-text li p:last-child {
+  color: #fff;
+}
+.ds-block-blue .ds-block-text::before {
+  position: absolute;
+  top: 0;
+  left: -94px;
+  content: "";
+  width: calc(100% + 94px);
+  height: 100%;
+  background: rgba(54, 70, 122, 0.9);
+  z-index: -1;
+}
+.ds-block-blue__reverse {
+  flex-direction: row-reverse;
+}
+.ds-block-blue__reverse .ds-block-text::before {
+  left: auto;
+  right: -94px;
+}
+
+@media (max-width: 1100px) {
+  .ds-block-blue img {
+    left: 0;
+    width: 100%;
+  }
+  .ds-block-blue .ds-block-text {
+    min-width: 100%;
+  }
+  .ds-block-blue .ds-block-text::before {
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .ds-block-blue .ds-block-text {
+    padding: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
+</style>
+</head>
+
+<body>
+    <div class="wrapper" style="max-width: 1760px!important;">
+        <div class="text-style">
+            <section class="news-single-page">
+                <div class="wrapper">
+                    <div class="new_detail_picture">
+                        <img src=" https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="product-img" class="product-img">
+                        <div class="ds_detail_picture_description">
+                            <div class="ds_detail_picture__header">
+                                <h1 class="ds_detail_picture__title">
+                                    Распределённая энергетика.
+                                </h1>
+                                <p class="ds_detail_picture__sub-title">Что это такое?</p>
+                            </div>
+                            <div class="ds_detail_picture_card">
+                                <p>
+                                    Распределённая энергетика - это одно из самых актуальных направлений в современной энергетической отрасли, 
+                                    предлагающее новые подходы к производству и потреблению энергии. Она открывает двери к энергетической независимости 
+                                    и экономии, а также предлагает решения для устойчивого развития.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ds-block ds-flex-block">
+                        <div class="ds-block-text ds-block-text__small">
+                            <h2>Распределённая энергетика:<wbr> что это?</h2>
+                            <p>
+                                Распределённая энергетика — это система, в которой производство и потребление энергии происходят в 
+                                непосредственной близости друг к другу. Это контрастирует с традиционной централизованной моделью, 
+                                где большие электростанции располагаются далеко от потребителей, что приводит к большим потерям при передаче энергии. 
+                                <br><br>
+                                Распределённая генерация включает в себя использование малых источников энергии, таких как микро-ТЭЦ, 
+                                солнечные панели, ветровые турбины и другие виды возобновляемых источников энергии, а также <a href="https://aggreko-eurasia.ru/equipment/gas-generator/">газовые генераторы</a>.
+                            </p>
+                        </div>
+                    
+                        <div class="ds-card ds-card__big">
+                            <p>
+                                Основное преимущество распределённой генерации заключается в её гибкости и возможности быстро адаптироваться 
+                                к изменяющимся потребностям потребителей, обеспечивая при этом повышенную надёжность энергоснабжения. Также 
+                                стоит отметить экономическую выгоду: снижение потерь при передаче энергии и возможность продажи излишков энергии 
+                                в централизованную сеть.              
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ds-block">
+                        <h2 class="ds-solo-title">Доля малой распределённой энергетики в мире</h2>
+
+                        <div class="ds-flex-block">
+                            <div class="ds-block-text ds-block-text__medium">
+                                <p>
+                                    Мировой рынок распределённой энергетики продолжает демонстрировать значительный рост. 
+                                    По данным Navigant Research, к 2020 году объём мирового рынка распределённой генерации 
+                                    достиг приблизительно 182 миллиарда долларов. Это обусловлено повышенным спросом на 
+                                    эффективные и экологически чистые энергетические решения.
+                                    <br><br>
+                                    Доля малой распределённой энергетики особенно высока в странах с развитой энергетической 
+                                    инфраструктурой, таких как Германия, США и Япония. В этих странах доля малой генерации может 
+                                    достигать 20-30% от общей выработки электроэнергии, что связано с активной политикой по поддержке 
+                                    возобновляемых источников энергии и децентрализации энергоснабжения. В Германии, например, благодаря 
+                                    государственным субсидиям и законодательной поддержке, в 2021 году доля возобновляемых источников в 
+                                    структуре распределённой генерации превысила 40%.
+                                </p>
+                            </div>
+    
+                            <div class="ds-card">
+                                <p class="ds-card__title">
+                                    182 <span>миллиарда $</span>
+                                </p>
+                                <p>
+                                    объём мирового рынка распределённой в 2020 году 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <h2 class="ds-solo-title">Доля малой распределённой энергетики в России</h2>
+
+                        <div class="ds-flex-block">
+                            <div class="ds-block-text ds-block-text__medium">
+                                <p>
+                                    В России распределённая генерация составляет значительную часть рынка, 
+                                    однако её доля ещё далека от показателей многих западных стран. 
+                                    <br><br>
+                                    Согласно данным Минэнерго России, к 2022 году доля малой распределённой 
+                                    энергетики составляет около 9% от общей установленной мощности электроэнергетических 
+                                    систем страны. Это включает малые ТЭЦ, солнечные и ветряные станции, а также маломасштабные 
+                                    гидроэлектростанции с общими мощностями, не превышающими 25 МВт.
+                                    <br><br>
+                                    Активное развитие распределённой энергетики в России началось в последние годы, благодаря 
+                                    государственным программам поддержки и введению стимулов для использования ВИЭ. 
+                                    <br><br>
+                                    В результате только за последний год объем ввода новых мощностей в рамках малой 
+                                    генерации увеличился на 15%, что свидетельствует о стремительном росте интереса к данному сектору.
+                                </p>
+                            </div>
+    
+                            <div class="ds-card">
+                                <p class="ds-card__title">
+                                    9%
+                                </p>
+                                <p>
+                                    доля малой распределённой энергетики от общей установленной мощности
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Области применения распределённой генерации</h2>
+                            <p>
+                                Распределённая генерация находит своё применение в различных областях, 
+                                где особенно ценится независимость и гибкость в энергоснабжении. 
+                                Основные области включают:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <ol class="ds-mosaic">
+                            <li>
+                               <p>Промышленность</p>
+                               <p>Многие предприятия, особенно расположенные в удалённых или труднодоступных регионах, 
+                                используют собственные источники для обеспечения энергией. Это позволяет им снизить 
+                                зависимость от центральных сетей и уменьшить энергетические издержки.</p>
+                            </li>
+                            <li>
+                               <p>Жилищный сектор</p>
+                               <p>В новостройках и коттеджных посёлках все чаще используются малые энергетические 
+                                установки для автономного обеспечения жителей электричеством и теплом, что 
+                                способствует снижению общих коммунальных расходов.</p>
+                            </li>
+                            <li>
+                               <p>Сельское хозяйство</p>
+                               <p>Фермерские хозяйства и агропромышленные комплексы активно внедряют технологии 
+                                распределённой генерации для обеспечения независимости от внешних источников энергии 
+                                и увеличения эффективности производства.</p>
+                            </li>
+                            <li>
+                               <p>Муниципальное хозяйство</p>
+                               <p>Городские инфраструктуры, включая водоснабжение, освещение и отопление, все чаще 
+                                обращаются к распределённой генерации, чтобы снизить расходы и улучшить качество 
+                                предоставляемых услуг.</p>
+                            </li>
+                            <li>
+                               <p>Телекоммуникации и IT</p>
+                               <p>Дата-центры и операторы связи используют распределённую генерацию для 
+                                гарантии бесперебойности питания критически важных систем.</p>
+                            </li>
+                            <li class="img">
+                               <img  src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="product-img" class="product-img">
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text">
+                            <h2>Влияние технологического прогресса</h2>
+                            <p>
+                                Технологический прогресс оказывает значительное влияние на распределённую генерацию, существенно 
+                                расширяя её возможности и области применения. Особенно это касается развития и внедрения умных сетей 
+                                <span>(Smart Grids)</span> и систем управления энергопотреблением. Например, внедрение интернета вещей <span>(IoT)</span> позволяет 
+                                оптимизировать работу энергетических установок, улучшая их эффективность и уменьшая эксплуатационные расходы.
+                                <br><br>
+                                Современные технологии цифровизации также позволяют интегрировать распределённые источники энергии в единую 
+                                систему, что способствует более гибкому и эффективному управлению нагрузками. Примером может служить использование 
+                                программного обеспечения для балансировки производства и потребления энергии в реальном времени, что снижает риски 
+                                перебоев в энергоснабжении и улучшает надёжность системы.
+                                <br><br>
+                                Кроме того, развитие и внедрение новых материалов и технологий, таких как улучшенные типы аккумуляторов для 
+                                хранения энергии, прямо влияют на возможности распределённой энергетики. Эти инновации позволяют увеличить 
+                                энергоэффективность и сократить время амортизации инвестиций в распределённую генерацию.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text">
+                            <h2>Применение распределённой генерации в энергосистеме</h2>
+                            <p>
+                                Распределённая генерация играет ключевую роль в обеспечении надёжности, устойчивости и гибкости энергосистемы. 
+                                Особенно это актуально для России, где большие расстояния между городами и населенными пунктами создают сложности 
+                                для централизованного энергоснабжения. Например, внедрение распределённой генерации позволяет обеспечить энергией 
+                                удалённые населённые пункты и промышленные объекты, минимизируя потери в сети и повышая общую энергетическую безопасность.
+                                <br><br>
+                                В рамках модернизации энергосистемы большое значение имеет интеграция распределённой генерации с возобновляемыми 
+                                источниками энергии. Так, по данным Росстата, общая мощность установленных солнечных станций в России за 2021 год 
+                                увеличилась на 12%. Это позволяет не только сократить зависимость от традиционных источников энергии, но и значительно 
+                                уменьшить углеродный след энергосектора.
+                                <br><br>
+                                Распределённая генерация способствует повышению энергетической эффективности на микроуровне. Например, использование 
+                                когенерационных технологий позволяет одновременно производить электричество и тепло, что идеально подходит для промышленных 
+                                предприятий и жилых комплексов, особенно в условиях сурового российского климата (Сибирь и Дальний Восток).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-img">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Влияние интеграции распределённой генерации 
+                                на надёжность энергетических систем</h2>
+                            <p>
+                                Интеграция распределённой генерации в системы распределённой энергии вносит значительный 
+                                вклад в повышение их надёжности. Основные аспекты влияния включают:
+                            </p>
+                            <ul class="ds-list-a">
+                                <li>
+                                    <p>Уменьшение нагрузки на централизованные сети</p>
+                                    <p>Распределённая генерация сокращает потребность в передаче электроэнергии на большие расстояния, 
+                                        тем самым уменьшая потери энергии и снижая риск перегрузок и аварий в сети.</p>
+                                </li>
+                                <li>
+                                    <p>Повышение гибкости системы</p>
+                                    <p>Локальное производство энергии обеспечивает энергосистеме большую гибкость в управлении нагрузками, 
+                                        позволяя более эффективно реагировать на изменения в потреблении энергии. Это особенно важно в условиях 
+                                        возрастающей вариабельности нагрузок и внедрения новых технологий, таких как электромобили.</p>
+                                </li>
+                                <li>
+                                    <p>Увеличение резервной мощности</p>
+                                    <p>Системы с распределённой генерацией могут быстро вводиться в эксплуатацию для обеспечения 
+                                        дополнительной мощности в пиковые периоды, что способствует стабилизации сети и предотвращению отключений.</p>
+                                </li>
+                                <li>
+                                    <p>Улучшение стабильности напряжения и качества электроэнергии</p>
+                                    <p>Местные источники питания помогают поддерживать стабильность напряжения в сети, улучшая тем самым качество 
+                                        электроэнергии и сокращая количество сбоев в работе электроприборов и оборудования.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text">
+                            <h2>Факторы увеличения темпов роста и ёмкости рынка малой генерации</h2>
+                            <p>
+                                Рынок малой генерации продолжает расти благодаря ряду важных факторов:
+                            </p>
+                            <ol class="ds-mosaic big margin">
+                                <li>
+                                   <p>Снижение стоимости технологий</p>
+                                   <p>Как уже отмечалось, стоимость солнечных панелей и других технологий для малой генерации значительно упала 
+                                    за последнее десятилетие. Это делает инвестиции в малую генерацию более доступными для широкого круга потребителей 
+                                    и предприятий.</p>
+                                </li>
+                                <li>
+                                    <p>Государственные стимулы и поддержка</p>
+                                    <p>Многие страны вводят субсидии, налоговые льготы и другие формы поддержки для стимулирования развития распределённой 
+                                        генерации, что способствует увеличению её доли в энергетическом балансе. Например, в России действуют программы 
+                                        поддержки внедрения возобновляемых источников энергии в частности, в рамках нацпроекта "Экология".</p>
+                                </li>
+                                <li>
+                                    <p>Повышение энергетической независимости</p>
+                                    <p>Стремление к самодостаточности в энергетическом обеспечении, особенно в удалённых и труднодоступных регионах, 
+                                        толкает к развитию малых форм генерации, которые могут обеспечить надёжное и независимое энергоснабжение.</p>
+                                </li>
+                                <li>
+                                    <p>Экологическая ответственность</p>
+                                    <p>
+                                        Увеличение осведомлённости об экологических проблемах и стремление к сокращению вредных выбросов стимулируют 
+                                        переход к чистым источникам энергии, включая малую генерацию на базе возобновляемых источников.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-img ds-block-img__reverse">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Потенциал развития распределённой генерации в России</h2>
+                            <p>
+                                Распределённая генерация в России обладает значительным потенциалом развития, учитывая огромные территории 
+                                страны и неоднородность распределения населения и промышленности. 
+                                По данным аналитического агентства "РосБизнесКонсалтинг", к 2030 году ожидается увеличение объёма 
+                                рынка распределённой генерации до 35% от всей генерируемой мощности в России, что эквивалентно 20% от общей выработки электроэнергии.
+                            </p>
+                            <p>
+                                Существующие законодательные инициативы, такие как федеральная программа по поддержке использования возобновляемых источников энергии, 
+                                а также региональные субсидии и льготы для малых генерирующих компаний, создают благоприятные условия для роста этого сегмента. Особенно 
+                                большой интерес представляет развитие малых форм генерации в удалённых и изолированных от центральной энергосети регионах, где строительство 
+                                традиционной инфраструктуры обходится крайне дорого.
+                            </p>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-img">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Технологии распределённой генерации</h2>
+                            <p>
+                                Технологии распределённой генерации включают широкий спектр методов и устройств для производства электричества и тепла, 
+                                которые можно эффективно использовать на местах без необходимости транспортировки энергии на большие расстояния. 
+                                Важными технологиями являются:
+                            </p>
+                            <ul class="ds-list-a">
+                                <li>
+                                    <p>Фотовольтаика</p>
+                                    <p>Солнечные панели становятся всё более популярным и доступным решением благодаря снижению стоимости производства и 
+                                    повышению эффективности. В России потенциал солнечной энергетики особенно высок в южных регионах, где до 300 солнечных дней в году.</p>
+                                </li>
+                                <li>
+                                    <p>Ветровые установки</p>
+                                    <p>Развитие ветроэнергетики также активизировалось, особенно в прибрежных зонах и открытых равнинных территориях, 
+                                    где ветровой потенциал наиболее высок.</p>
+                                </li>
+                                <li>
+                                    <p>Когенерационные установки</p>
+                                    <p>Производство тепла и электроэнергии одновременно позволяет значительно повысить КПД использования топлива. 
+                                    Это особенно актуально для промышленных предприятий и объектов коммунального хозяйства.</p>
+                                </li>
+                                <li>
+                                    <p>Газопоршневые и дизельные генераторы</p>
+                                    <p>Установки идеально подходят для обеспечения автономности в районах с отсутствием стабильного доступа к центральной энергосети.</p>
+                                </li>
+                                <li>
+                                    <p>Топливные элементы и микротурбины</p>
+                                    <p>Технологии представляют передний край инноваций в области распределённой генерации, обеспечивая высокую 
+                                    эффективность и минимальное воздействие на окружающую среду.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text">
+                            <h2>Возобновляемая энергетика</h2>
+                            <p>
+                                Возобновляемая энергетика в России продолжает развиваться, хотя доля возобновляемых источников в общей структуре энергоснабжения 
+                                страны все еще относительно мала. К 2023 году общая установленная мощность ВИЭ в России составила приблизительно 2.8 ГВт, 
+                                что составляет около 1.5% от общей установленной мощности страны. 
+                                <br><br>
+                                Основной вклад в этот сегмент вносят ветровые и солнечные электростанции, на долю которых приходится более 
+                                60% всей установленной мощности ВИЭ. Существенное развитие наблюдается в регионах с высоким потенциалом 
+                                возобновляемых источников, таких как Южный федеральный округ и Дальневосточный федеральный округ, 
+                                где благодаря государственным и региональным программам поддержки, объем введенной в эксплуатацию мощности 
+                                ВИЭ увеличился в последние пять лет на 20%..
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text">
+                            <h2>Преимущества возобновляемых источников энергии</h2>
+                            <p>
+                                Возобновляемые источники энергии (ВИЭ) предлагают несколько ключевых преимуществ, делающих их все более 
+                                привлекательными для использования на территории России:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <ol class="ds-mosaic">
+                            <li>
+                               <p>Энергетическая независимость</p>
+                               <p>Использование местных возобновляемых источников уменьшает зависимость страны от импорта ископаемого топлива, 
+                                что повышает энергетическую безопасность.</p>
+                            </li>
+                            <li>
+                                <p>Устойчивость цен</p>
+                                <p>Возобновляемая энергия не зависит от цен на ископаемое топливо, что обеспечивает большую предсказуемость и 
+                                стабильность стоимости энергии в долгосрочной перспективе</p>
+                            </li>
+                            <li>
+                                <p>Создание рабочих мест</p>
+                                <p>Развитие проектов в области ВИЭ способствует созданию новых рабочих мест, как в сфере строительства, 
+                                так и в области обслуживания энергетических установок.</p>
+                            </li>
+                            <li>
+                                <p>Экологическая чистота</p>
+                                <p>ВИЭ не производят вредных выбросов в атмосферу, что существенно снижает экологическую нагрузку по сравнению 
+                                с традиционными источниками энергии. Это особенно важно в контексте ужесточения международных требований по сокращению выбросов углекислого газа.</p>
+                            </li>
+                            <li>
+                                <p>Децентрализация энергоснабжения</p>
+                                <p>Возобновляемые источники позволяют создавать малые и средние энергетические установки, располагаемые в непосредственной близости к местам потребления, 
+                                что снижает потери при передаче энергии и увеличивает эффективность системы в целом.</p>
+                             </li>
+                        </ol>
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-blue">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Газовая распределённая генерация – наиболее эффективная технология малой энергетики</h2>
+                            <p>
+                                Использование природного газа, как топлива для генерации электроэнергии и тепла позволяет 
+                                достичь высокого уровня КПД, минимизируя при этом вредные выбросы в атмосферу. 
+                                Преимущества газовой распределённой генерации включают:
+                            </p>
+                            <ul class="ds-list-a">
+                                <li>
+                                    <p>Высокий КПД</p>
+                                    <p>Могут достигать КПД до 50-60%, что значительно превышает показатели угольных электростанций.</p>
+                                </li>
+                                <li>
+                                    <p>Быстрота реагирования на изменения нагрузки</p>
+                                    <p>Способны быстро изменять уровень выработки энергии, что идеально подходит для поддержания баланса в энергосистеме при колебаниях спроса.</p>
+                                </li>
+                                <li>
+                                    <p>Низкие эксплуатационные расходы</p>
+                                    <p>Обладают сравнительно низкими эксплуатационными расходами и требуют меньшего обслуживания по сравнению с другими видами генерации.</p>
+                                </li>
+                                <li>
+                                    <p>Экологичность</p>
+                                    <p>Сжигание природного газа сопровождается значительно меньшими выбросами CO2, NOx и SO2 по сравнению с углем или мазутом.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+
+                    <div class="ds-block">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Оборудование малой распределённой генерации. ГПУ</h2>
+                            <p>
+                                Эти установки работают на основе газовых двигателей, которые преобразуют химическую энергию газа 
+                                в механическую, а затем в электрическую энергию.
+                                Технические характеристики и преимущества ГПУ:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ds-block">
+                        <ol class="ds-mosaic big">
+                            <li>
+                               <p>Модульность</p>
+                               <p>Легко масштабировать, добавляя или уменьшая количество установок в зависимости от потребностей в энергии.</p>
+                            </li>
+                            <li>
+                                <p>Эффективность</p>
+                                <p>Могут достигать КПД до 50%, что делает их одним из наиболее эффективных способов малой генерации.</p>
+                            </li>
+                            <li>
+                                <p>Возможность когенерации</p>
+                                <p>Могут использоваться не только для выработки электричества, но и для производства тепла, что повышает общий КПД установки.</p>
+                            </li>
+                            <li>
+                                <p>Простота интеграции с возобновляемыми источниками</p>
+                                <p>Могут эффективно дополнять системы на основе возобновляемых источников энергии, такие как солнечные или ветровые станции, 
+                                обеспечивая необходимую мощность в периоды низкой генерации.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-img">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Воздействие распределённой генерации на окружающую среду</h2>
+                            <p>
+                                Использование возобновляемых источников энергии в рамках распределённой генерации способствует 
+                                уменьшению зависимости от ископаемого топлива и, как следствие, сокращению объёма выброса парниковых газов. 
+                                Основные экологические преимущества распределённой генерации:
+                            </p>
+                            <ul class="ds-list-a">
+                                <li>
+                                    <p>Сокращение выбросов</p>
+                                    <p>Небольшие, локально размещённые установки обычно имеют меньший объем вредных выбросов по сравнению с крупными ТЭЦ или АЭС.</p>
+                                </li>
+                                <li>
+                                    <p>Уменьшение потерь энергии</p>
+                                    <p>Поскольку энергия производится ближе к месту потребления, снижаются потери энергии, что также ведет к уменьшению общих выбросов углекислого газа.</p>
+                                </li>
+                                <li>
+                                    <p>Использование возобновляемых источников</p>
+                                    <p>Распределённая генерация часто включает в себя использование солнечной, ветровой и гидроэнергии, которые 
+                                    являются полностью возобновляемыми и экологически чистыми источниками энергии.</p>
+                                </li>
+                                <li>
+                                    <p>Повышение устойчивости системы </p>
+                                    <p>Децентрализованные источники энергии делают энергосистему более устойчивой к отказам и чрезвычайным ситуациям, 
+                                    что также может снизить риски экологических аварий.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-blue ds-block-blue__reverse">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Что даёт малая энергетика потребителю</h2>
+                            <p>
+                                Малая энергетика, основанная на принципах распределённой генерации, предоставляет потребителям ряд значимых преимуществ, 
+                                которые способствуют не только повышению энергетической независимости, но и улучшению общей экономической эффективности 
+                                и экологической устойчивости.
+                            </p>
+                            <ul class="ds-list-a">
+                                <li>
+                                    <p>Надёжность энергоснабжения</p>
+                                    <p>Малые источники энергии, установленные на территории потребителя или в его непосредственной близости, 
+                                    обеспечивают более высокую надёжность энергоснабжения. Это особенно важно в регионах с нестабильной 
+                                    работой централизованных энергосистем и частыми перебоями в подаче электроэнергии.</p>
+                                </li>
+                                <li>
+                                    <p>Снижение энергетических затрат</p>
+                                    <p>Владение собственными источниками генерации позволяет потребителям снизить зависимость от колебаний тарифов 
+                                    на энергию и уменьшить общие энергетические расходы.</p>
+                                </li>
+                                <li>
+                                    <p>Экологическая ответственность</p>
+                                    <p>Использование возобновляемых источников энергии в рамках малой генерации способствует снижению углеродного следа 
+                                    и улучшению экологической ситуации, что важно для компаний, стремящихся к соответствию экологическим стандартам и нормам.</p>
+                                </li>
+                                <li>
+                                    <p>Увеличение энергетической автономии</p>
+                                    <p>Малая энергетика позволяет объектам быть менее зависимыми от внешних источников энергоснабжения, обеспечивая возможность 
+                                    самостоятельно контролировать производство и потребление энергии.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+
+                    <div class="ds-block ds-flex-block ds-block-img ds-block-img__reverse">
+                        <div class="ds-block-text ds-block-text__medium">
+                            <h2>Направление развития и перспективы</h2>
+                            <p>
+                                Распределённая генерация и малая энергетика продолжают развиваться, адаптируясь к меняющимся экономическим и экологическим условиям. 
+                                Вот некоторые из ключевых направлений развития и перспективы для малой энергетики:
+                            </p>
+                            <ul class="ds-list-a">
+                                <li>
+                                    <p>Технологические инновации </p>
+                                    <p>Продолжается разработка и внедрение новых технологий в области хранения энергии, улучшения эффективности использования 
+                                    возобновляемых источников и оптимизации систем управления энергетическими потоками.</p>
+                                </li>
+                                <li>
+                                    <p>Расширение законодательной поддержки</p>
+                                    <p>Ожидается, что государственная поддержка проектов в области малой и распределённой энергетики будет расширяться через 
+                                    введение новых субсидий, налоговых льгот и программ стимулирования.</p>
+                                </li>
+                                <li>
+                                    <p>Интеграция с “умными сетями”</p>
+                                    <p>Малая энергетика станет неотъемлемой частью концепции "умных городов" и "умных сетей", где все элементы энергосистемы будут 
+                                    взаимодействовать друг с другом для оптимизации потребления и производства энергии.</p>
+                                </li>
+                                <li>
+                                    <p>Развитие микросетей</p>
+                                    <p>В регионах с ограниченным доступом к централизованным энергосистемам микросети на базе малой генерации могут стать основой 
+                                    для обеспечения надёжного и эффективного энергоснабжения.</p>
+                                </li>
+                                <li>
+                                    <p>Экспорт технологий</p>
+                                    <p>С развитием отечественных технологий в области малой энергетики возрастает потенциал для их экспорта в страны, развивающие 
+                                    свою инфраструктуру возобновляемой энергетики.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://aggreko-eurasia.ru/upload/iblock/061/y8q6tfo71n1xwht8lh3h7o5zch07k74s/787aca4148660b962543849caa4b95ea.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
